@@ -1,0 +1,159 @@
+{
+  "input_mode": "lesion_only",
+  "input_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step03_lesion_only.csv",
+  "n_input_rows_after_filters": 1841,
+  "n_input_columns": 184,
+  "n_conflict_patients_excluded": 0,
+  "n_radiomics_columns_detected": 107,
+  "n_case_rows": 236,
+  "n_case_columns": 577,
+  "n_patient_rows": 139,
+  "n_patient_columns": 765,
+  "n_numeric_model_features": 742,
+  "n_numeric_model_features_no_scanner_covariates": 737,
+  "n_scanner_covariate_columns": 8,
+  "n_field_strength_only_candidate_columns": 4,
+  "n_categorical_model_features": 11,
+  "n_high_missingness_excluded": 0,
+  "patient_split_counts": {
+    "train": 102,
+    "valid": 20,
+    "test": 17
+  },
+  "patient_stratum_counts": {
+    "0_0_1_FS1.5": 28,
+    "0_0_0_FS1.5": 28,
+    "1_1_0_FS1.5": 19,
+    "1_1_1_FS1.5": 18,
+    "1_0_0_FS1.5": 11,
+    "1_0_1_FS1.5": 10,
+    "0_0_1_FS3.0": 5,
+    "M_M_1_FS1.5": 3,
+    "0_1_1_FS1.5": 2,
+    "1_0_1_FS3.0": 2,
+    "1_1_M_FS1.5": 2,
+    "1_M_M_FS1.5": 2,
+    "0_0_0_FS3.0": 2,
+    "0_1_0_FS1.5": 2,
+    "0_1_M_FSM": 1,
+    "M_M_1_FS3.0": 1,
+    "1_1_0_FS3.0": 1,
+    "0_M_M_FSM": 1,
+    "0_0_M_FS1.5": 1
+  },
+  "target_non_missing_counts": {
+    "target_er": 135,
+    "target_pr": 132,
+    "target_her2": 132
+  },
+  "split_target_balance": {
+    "target_er": [
+      {
+        "split": "test",
+        "n_total": 16,
+        "n_positive": 7.0,
+        "positive_rate": 0.4375
+      },
+      {
+        "split": "train",
+        "n_total": 100,
+        "n_positive": 48.0,
+        "positive_rate": 0.48
+      },
+      {
+        "split": "valid",
+        "n_total": 19,
+        "n_positive": 10.0,
+        "positive_rate": 0.5263157894736842
+      }
+    ],
+    "target_pr": [
+      {
+        "split": "test",
+        "n_total": 16,
+        "n_positive": 5.0,
+        "positive_rate": 0.3125
+      },
+      {
+        "split": "train",
+        "n_total": 97,
+        "n_positive": 34.0,
+        "positive_rate": 0.35051546391752575
+      },
+      {
+        "split": "valid",
+        "n_total": 19,
+        "n_positive": 6.0,
+        "positive_rate": 0.3157894736842105
+      }
+    ],
+    "target_her2": [
+      {
+        "split": "test",
+        "n_total": 17,
+        "n_positive": 9.0,
+        "positive_rate": 0.5294117647058824
+      },
+      {
+        "split": "train",
+        "n_total": 95,
+        "n_positive": 49.0,
+        "positive_rate": 0.5157894736842106
+      },
+      {
+        "split": "valid",
+        "n_total": 20,
+        "n_positive": 11.0,
+        "positive_rate": 0.55
+      }
+    ]
+  },
+  "split_field_strength_balance": {
+    "test": {
+      "1.5T": 16,
+      "3T": 1,
+      "missing": 0
+    },
+    "train": {
+      "1.5T": 91,
+      "3T": 9,
+      "missing": 2
+    },
+    "valid": {
+      "1.5T": 19,
+      "3T": 1,
+      "missing": 0
+    }
+  },
+  "field_strength_patient_counts": {
+    "1.5": 126,
+    "3.0": 11,
+    "missing": 2
+  },
+  "field_strength_lesion_counts": {
+    "1.5T": 1119,
+    "3T": 720,
+    "missing": 2
+  },
+  "scanner_audit_summary": {
+    "enabled": true,
+    "available": true,
+    "n_radiomics_shift_features_tested": 107,
+    "n_radiomics_shift_features_p_lt_0_05": 8,
+    "n_radiomics_shift_features_p_lt_0_0001": 5
+  },
+  "gpu_available_torch": false,
+  "gpu_name": null,
+  "step03_input_summary": {
+    "n_rows_in_step03_input": 2825,
+    "analysis_candidate_final_count": 1841,
+    "lesion_only_rows": 1841
+  },
+  "method_notes": {
+    "patient_level_split_only": true,
+    "patient_label_conflicts_excluded": true,
+    "stratification_optionally_includes_field_strength": true,
+    "scanner_covariates_explicitly_preserved": true,
+    "combat_not_applied_in_stage04_to_avoid_leakage": true
+  }
+}

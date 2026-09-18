@@ -1,0 +1,6 @@
+﻿feature,importance,importance_std,importance_type
+dominant_field_strength_t,0.04131944444444445,0.056308911194750275,permutation_roc_auc_locked_test
+entropy_magnetic_field_strength_patient,0.0,0.0,permutation_roc_auc_locked_test
+entropy_manufacturer_patient,0.0,0.0,permutation_roc_auc_locked_test
+n_unique_field_strength_patient,0.0,0.0,permutation_roc_auc_locked_test
+n_unique_manufacturer_patient,0.0,0.0,permutation_roc_auc_locked_test

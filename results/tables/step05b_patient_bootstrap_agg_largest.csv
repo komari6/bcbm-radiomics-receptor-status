@@ -1,0 +1,4 @@
+﻿target,target_display,feature_set_variant,n_patients,cross_fitted_auroc,boot_ci_lo,boot_ci_hi,n_bootstrap
+ER_bin,ER,radiomics_pure,119,0.4474279253815715,0.34634484785163905,0.5509397438846938,2000
+PR_bin,PR,radiomics_pure,116,0.5052631578947369,0.3895991974846077,0.61774213794926,2000
+HER2_bin,HER2,radiomics_pure,115,0.5590909090909091,0.4518125557040998,0.6678768650184258,2000

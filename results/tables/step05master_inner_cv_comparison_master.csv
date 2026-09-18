@@ -1,0 +1,109 @@
+﻿target,target_display,scenario,feature_set_variant,model,model_display,mean_inner_cv_auroc,std_inner_cv_auroc,n_outer_folds_as_winner
+target_er,ER,nested_cv_leakage_safe,acquisition_only,extra_trees,Extra Trees,0.5642861519607842,0.018712982002248028,3
+target_er,ER,nested_cv_leakage_safe,acquisition_only,elastic_net,Elastic Net (L1+L2),0.5357638888888888,0.034601893533566075,1
+target_er,ER,nested_cv_leakage_safe,acquisition_only,pls_logistic,PLS + Logistic,0.524030841503268,0.037223237762312095,1
+target_er,ER,nested_cv_leakage_safe,acquisition_only,svm_linear,Linear SVM (Calibrated),0.5049407679738562,0.04618855164754006,0
+target_er,ER,nested_cv_leakage_safe,acquisition_only,lgbm,LightGBM,0.5020833333333333,0.004166666666666652,0
+target_er,ER,nested_cv_leakage_safe,acquisition_only,lgbm_strong,LightGBM (Strong Reg.),0.5,0.0,0
+target_er,ER,nested_cv_leakage_safe,acquisition_only,elastic_net_sparse,Elastic Net (Sparse),0.5,0.0,0
+target_er,ER,nested_cv_leakage_safe,acquisition_only,elastic_net_strong,Elastic Net (Strong),0.5,0.0,0
+target_er,ER,nested_cv_leakage_safe,acquisition_only,xgb,XGBoost,0.5,0.0,0
+target_er,ER,nested_cv_leakage_safe,all_features,lgbm,LightGBM,0.4978737745098039,0.052022387994551576,3
+target_er,ER,nested_cv_leakage_safe,all_features,elastic_net_sparse,Elastic Net (Sparse),0.49741319444444443,0.008797887587545445,0
+target_er,ER,nested_cv_leakage_safe,all_features,elastic_net_strong,Elastic Net (Strong),0.49333537581699344,0.019484041985689916,1
+target_er,ER,nested_cv_leakage_safe,all_features,lgbm_strong,LightGBM (Strong Reg.),0.48946078431372547,0.023631837816748828,1
+target_er,ER,nested_cv_leakage_safe,all_features,pls_logistic,PLS + Logistic,0.4761289828431372,0.03415575806493541,0
+target_er,ER,nested_cv_leakage_safe,all_features,svm_linear,Linear SVM (Calibrated),0.4717682802287582,0.033144263663419986,0
+target_er,ER,nested_cv_leakage_safe,all_features,elastic_net,Elastic Net (L1+L2),0.4698922589869281,0.026264380576314028,0
+target_er,ER,nested_cv_leakage_safe,all_features,extra_trees,Extra Trees,0.45638582516339865,0.02419198145899999,0
+target_er,ER,nested_cv_leakage_safe,all_features,xgb,XGBoost,0.45370149101307183,0.032913127830089976,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_strong,Elastic Net (Strong),0.5147079248366013,0.02188345927187046,2
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,lgbm,LightGBM,0.507985089869281,0.052414378530755736,3
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_sparse,Elastic Net (Sparse),0.5014654820261437,0.012808275631027106,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,lgbm_strong,LightGBM (Strong Reg.),0.49529411764705883,0.015303563399246836,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,pls_logistic,PLS + Logistic,0.48749948937908494,0.024931499031788457,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,svm_linear,Linear SVM (Calibrated),0.48225847630718954,0.03578263799278884,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,xgb,XGBoost,0.4786928104575163,0.03692209449731929,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net,Elastic Net (L1+L2),0.47792024101307196,0.029754422548797125,0
+target_er,ER,nested_cv_leakage_safe,radiomics_plus_burden,extra_trees,Extra Trees,0.4739828431372549,0.04672259763641986,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,elastic_net_strong,Elastic Net (Strong),0.5216993464052289,0.02451369084273317,3
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,elastic_net_sparse,Elastic Net (Sparse),0.5077154820261438,0.01957967332840102,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,lgbm,LightGBM,0.5035712826797385,0.045829554531588795,1
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,pls_logistic,PLS + Logistic,0.48492493872549025,0.048786756796238485,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,svm_linear,Linear SVM (Calibrated),0.48380770016339864,0.05063340084640793,1
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,lgbm_strong,LightGBM (Strong Reg.),0.4802246732026144,0.02167554025745618,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,elastic_net,Elastic Net (L1+L2),0.4732306985294118,0.030581397030646867,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,xgb,XGBoost,0.4714603758169934,0.032354032376562245,0
+target_er,ER,nested_cv_leakage_safe,radiomics_pure,extra_trees,Extra Trees,0.47051164215686275,0.038441981048505595,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,extra_trees,Extra Trees,0.5587996031746032,0.030309928009707356,3
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,elastic_net,Elastic Net (L1+L2),0.5405257936507937,0.025238415004962426,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,pls_logistic,PLS + Logistic,0.5385813492063491,0.04264629756076392,1
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,svm_linear,Linear SVM (Calibrated),0.5258432539682539,0.05306452937250859,1
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,elastic_net_strong,Elastic Net (Strong),0.5,0.0,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,lgbm_strong,LightGBM (Strong Reg.),0.5,0.0,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,lgbm,LightGBM,0.5,0.0,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,elastic_net_sparse,Elastic Net (Sparse),0.5,0.0,0
+target_her2,HER2,nested_cv_leakage_safe,acquisition_only,xgb,XGBoost,0.5,0.0,0
+target_her2,HER2,nested_cv_leakage_safe,all_features,xgb,XGBoost,0.5336607142857142,0.07116185322025764,2
+target_her2,HER2,nested_cv_leakage_safe,all_features,elastic_net_strong,Elastic Net (Strong),0.5301785714285714,0.0221897260983201,1
+target_her2,HER2,nested_cv_leakage_safe,all_features,extra_trees,Extra Trees,0.5262202380952381,0.0502017416864669,0
+target_her2,HER2,nested_cv_leakage_safe,all_features,lgbm,LightGBM,0.525704365079365,0.06595385828670293,1
+target_her2,HER2,nested_cv_leakage_safe,all_features,elastic_net,Elastic Net (L1+L2),0.5234325396825398,0.05629459543493199,0
+target_her2,HER2,nested_cv_leakage_safe,all_features,lgbm_strong,LightGBM (Strong Reg.),0.5226488095238095,0.05442471167578837,0
+target_her2,HER2,nested_cv_leakage_safe,all_features,elastic_net_sparse,Elastic Net (Sparse),0.5182936507936509,0.015919896048625544,1
+target_her2,HER2,nested_cv_leakage_safe,all_features,pls_logistic,PLS + Logistic,0.5156150793650793,0.05350637584658323,0
+target_her2,HER2,nested_cv_leakage_safe,all_features,svm_linear,Linear SVM (Calibrated),0.5152182539682539,0.05552711857238206,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,xgb,XGBoost,0.5406051587301588,0.0627863777897216,3
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net,Elastic Net (L1+L2),0.5353968253968254,0.06147651527174556,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,extra_trees,Extra Trees,0.5324305555555556,0.07207248344368664,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_strong,Elastic Net (Strong),0.5298214285714286,0.01102442802840537,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,pls_logistic,PLS + Logistic,0.5242857142857142,0.06498303337879902,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,svm_linear,Linear SVM (Calibrated),0.5188690476190476,0.0639300493459268,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_sparse,Elastic Net (Sparse),0.5182936507936509,0.015919896048625544,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,lgbm,LightGBM,0.5163194444444444,0.058151458317348935,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,lgbm_strong,LightGBM (Strong Reg.),0.5158234126984127,0.042998531288821,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,elastic_net,Elastic Net (L1+L2),0.5498809523809524,0.05558815653435888,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,pls_logistic,PLS + Logistic,0.5457738095238095,0.07358365979388448,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,elastic_net_strong,Elastic Net (Strong),0.5415079365079365,0.03161011330315897,2
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,xgb,XGBoost,0.5368055555555556,0.05729311394447655,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,svm_linear,Linear SVM (Calibrated),0.531686507936508,0.0691941805688208,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,lgbm,LightGBM,0.5312996031746031,0.07705617767463978,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,extra_trees,Extra Trees,0.5287996031746032,0.07338257908524555,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,lgbm_strong,LightGBM (Strong Reg.),0.523720238095238,0.05059129303013588,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_pure,elastic_net_sparse,Elastic Net (Sparse),0.5185515873015873,0.02700089931594861,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,elastic_net,Elastic Net (L1+L2),0.5175620490620491,0.017779154315066104,1
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,svm_linear,Linear SVM (Calibrated),0.5173088023088023,0.03510302624091079,2
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,pls_logistic,PLS + Logistic,0.5161284271284271,0.026741811441568928,1
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,elastic_net_strong,Elastic Net (Strong),0.5,0.0,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,elastic_net_sparse,Elastic Net (Sparse),0.5,0.0,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,lgbm_strong,LightGBM (Strong Reg.),0.5,0.0,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,lgbm,LightGBM,0.5,0.0,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,xgb,XGBoost,0.5,0.0,0
+target_pr,PR,nested_cv_leakage_safe,acquisition_only,extra_trees,Extra Trees,0.48617604617604615,0.017735236224323134,1
+target_pr,PR,nested_cv_leakage_safe,all_features,xgb,XGBoost,0.5274891774891775,0.05617187325230734,1
+target_pr,PR,nested_cv_leakage_safe,all_features,elastic_net_sparse,Elastic Net (Sparse),0.512020202020202,0.06400768916889475,2
+target_pr,PR,nested_cv_leakage_safe,all_features,lgbm,LightGBM,0.5109906204906205,0.07387089129526644,1
+target_pr,PR,nested_cv_leakage_safe,all_features,elastic_net_strong,Elastic Net (Strong),0.4975873015873017,0.0765930096381703,0
+target_pr,PR,nested_cv_leakage_safe,all_features,lgbm_strong,LightGBM (Strong Reg.),0.4923917748917749,0.0716620566277977,1
+target_pr,PR,nested_cv_leakage_safe,all_features,extra_trees,Extra Trees,0.4873881673881673,0.08810131420995503,0
+target_pr,PR,nested_cv_leakage_safe,all_features,elastic_net,Elastic Net (L1+L2),0.4860202020202021,0.06175915320052414,0
+target_pr,PR,nested_cv_leakage_safe,all_features,pls_logistic,PLS + Logistic,0.48431890331890337,0.06102908533428741,0
+target_pr,PR,nested_cv_leakage_safe,all_features,svm_linear,Linear SVM (Calibrated),0.4795238095238095,0.07029229286518207,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,xgb,XGBoost,0.5216666666666667,0.05332778026068399,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_sparse,Elastic Net (Sparse),0.5180808080808081,0.07367763299775029,2
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,lgbm,LightGBM,0.5098795093795093,0.07810827953166574,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_strong,Elastic Net (Strong),0.4970822510822511,0.08512221524947339,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,lgbm_strong,LightGBM (Strong Reg.),0.49222582972582973,0.06720568731362728,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net,Elastic Net (L1+L2),0.4873477633477634,0.06368175611734156,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,pls_logistic,PLS + Logistic,0.4812164502164502,0.06521575626619626,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,extra_trees,Extra Trees,0.4750649350649351,0.08622097059920379,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_burden,svm_linear,Linear SVM (Calibrated),0.4727272727272728,0.06634557520880571,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,elastic_net_sparse,Elastic Net (Sparse),0.5235353535353535,0.07530535542539483,2
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,lgbm,LightGBM,0.508472582972583,0.06811897779821025,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,elastic_net_strong,Elastic Net (Strong),0.5022337662337664,0.08698457482091367,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,elastic_net,Elastic Net (L1+L2),0.5011572871572871,0.0701797905450227,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,xgb,XGBoost,0.4960966810966811,0.04419780801238805,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,pls_logistic,PLS + Logistic,0.49463636363636365,0.0652541503799549,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,lgbm_strong,LightGBM (Strong Reg.),0.48832251082251077,0.07281741304547548,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,svm_linear,Linear SVM (Calibrated),0.4877200577200577,0.06634247430238031,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_pure,extra_trees,Extra Trees,0.47471139971139964,0.06811340544201165,0

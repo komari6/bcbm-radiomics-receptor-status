@@ -1,0 +1,313 @@
+{
+  "step": "step_14_learning_curve_power",
+  "learning_curve": {
+    "model": "elastic_net",
+    "variant": "radiomics_pure",
+    "fractions": [
+      0.3,
+      0.45,
+      0.6,
+      0.75,
+      0.9,
+      1.0
+    ],
+    "outer_splits": 5,
+    "repeats": 5,
+    "rows": [
+      {
+        "target": "target_er",
+        "fraction": 0.3,
+        "n_train_effective": 29,
+        "n_train_nominal": 29,
+        "auroc_mean": 0.4981507381507382,
+        "auroc_std": 0.1112514191597052,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_er",
+        "fraction": 0.45,
+        "n_train_effective": 43,
+        "n_train_nominal": 43,
+        "auroc_mean": 0.5239160839160839,
+        "auroc_std": 0.1217600203684195,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_er",
+        "fraction": 0.6,
+        "n_train_effective": 57,
+        "n_train_nominal": 57,
+        "auroc_mean": 0.5055254467754468,
+        "auroc_std": 0.1473068952890535,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_er",
+        "fraction": 0.75,
+        "n_train_effective": 71,
+        "n_train_nominal": 71,
+        "auroc_mean": 0.5009226884226884,
+        "auroc_std": 0.0999854433825539,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_er",
+        "fraction": 0.9,
+        "n_train_effective": 85,
+        "n_train_nominal": 86,
+        "auroc_mean": 0.4902816627816628,
+        "auroc_std": 0.1324549317779169,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_er",
+        "fraction": 1.0,
+        "n_train_effective": 95,
+        "n_train_nominal": 95,
+        "auroc_mean": 0.4971600621600621,
+        "auroc_std": 0.1463330847100777,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 0.3,
+        "n_train_effective": 28,
+        "n_train_nominal": 28,
+        "auroc_mean": 0.4990208333333333,
+        "auroc_std": 0.1196157512679199,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 0.45,
+        "n_train_effective": 41,
+        "n_train_nominal": 42,
+        "auroc_mean": 0.4807291666666667,
+        "auroc_std": 0.1413760039015344,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 0.6,
+        "n_train_effective": 56,
+        "n_train_nominal": 56,
+        "auroc_mean": 0.4986041666666667,
+        "auroc_std": 0.1295283678978384,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 0.75,
+        "n_train_effective": 70,
+        "n_train_nominal": 70,
+        "auroc_mean": 0.4914374999999999,
+        "auroc_std": 0.1505042940740304,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 0.9,
+        "n_train_effective": 84,
+        "n_train_nominal": 84,
+        "auroc_mean": 0.4115833333333333,
+        "auroc_std": 0.1335143042690349,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_pr",
+        "fraction": 1.0,
+        "n_train_effective": 93,
+        "n_train_nominal": 93,
+        "auroc_mean": 0.4299583333333333,
+        "auroc_std": 0.1334052638006545,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 0.3,
+        "n_train_effective": 27,
+        "n_train_nominal": 28,
+        "auroc_mean": 0.5233333333333333,
+        "auroc_std": 0.1135438006850785,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 0.45,
+        "n_train_effective": 42,
+        "n_train_nominal": 41,
+        "auroc_mean": 0.5271212121212122,
+        "auroc_std": 0.1357125872426288,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 0.6,
+        "n_train_effective": 55,
+        "n_train_nominal": 55,
+        "auroc_mean": 0.5681818181818181,
+        "auroc_std": 0.1188790620965638,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 0.75,
+        "n_train_effective": 69,
+        "n_train_nominal": 69,
+        "auroc_mean": 0.5518181818181818,
+        "auroc_std": 0.1509334287299292,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 0.9,
+        "n_train_effective": 83,
+        "n_train_nominal": 83,
+        "auroc_mean": 0.5563636363636363,
+        "auroc_std": 0.1153721968311815,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      },
+      {
+        "target": "target_her2",
+        "fraction": 1.0,
+        "n_train_effective": 92,
+        "n_train_nominal": 92,
+        "auroc_mean": 0.5557575757575757,
+        "auroc_std": 0.0989355653813986,
+        "n_folds": 25,
+        "n_folds_failed": 0
+      }
+    ]
+  },
+  "power_analysis": [
+    {
+      "target": "target_er",
+      "target_display": "ER",
+      "set": "locked_test",
+      "n_pos": 7,
+      "n_neg": 9,
+      "n_total": 16,
+      "prevalence": 0.481,
+      "se_auc_at_0.70": 0.1376,
+      "power_to_detect_0.70": 0.247,
+      "power_sim_0.70": 0.36,
+      "power_sim_0.70_se_at_null": 0.233,
+      "se_auc_at_0.50": 0.15,
+      "min_detectable_auc_80pct": 0.875,
+      "required_total_n_auc070": 63,
+      "cohort_labeled_n": 135
+    },
+    {
+      "target": "target_er",
+      "target_display": "ER",
+      "set": "nested_oof_pool",
+      "n_pos": 58,
+      "n_neg": 61,
+      "n_total": 119,
+      "prevalence": 0.481,
+      "se_auc_at_0.70": 0.048,
+      "power_to_detect_0.70": 0.977,
+      "power_sim_0.70": null,
+      "power_sim_0.70_se_at_null": null,
+      "se_auc_at_0.50": 0.0532,
+      "min_detectable_auc_80pct": 0.647,
+      "required_total_n_auc070": null,
+      "cohort_labeled_n": 135
+    },
+    {
+      "target": "target_pr",
+      "target_display": "PR",
+      "set": "locked_test",
+      "n_pos": 5,
+      "n_neg": 11,
+      "n_total": 16,
+      "prevalence": 0.341,
+      "se_auc_at_0.70": 0.1519,
+      "power_to_detect_0.70": 0.225,
+      "power_sim_0.70": 0.315,
+      "power_sim_0.70_se_at_null": 0.238,
+      "se_auc_at_0.50": 0.1605,
+      "min_detectable_auc_80pct": 0.899,
+      "required_total_n_auc070": 72,
+      "cohort_labeled_n": 132
+    },
+    {
+      "target": "target_pr",
+      "target_display": "PR",
+      "set": "nested_oof_pool",
+      "n_pos": 40,
+      "n_neg": 76,
+      "n_total": 116,
+      "prevalence": 0.341,
+      "se_auc_at_0.70": 0.0531,
+      "power_to_detect_0.70": 0.953,
+      "power_sim_0.70": null,
+      "power_sim_0.70_se_at_null": null,
+      "se_auc_at_0.50": 0.0566,
+      "min_detectable_auc_80pct": 0.657,
+      "required_total_n_auc070": null,
+      "cohort_labeled_n": 132
+    },
+    {
+      "target": "target_her2",
+      "target_display": "HER2",
+      "set": "locked_test",
+      "n_pos": 9,
+      "n_neg": 8,
+      "n_total": 17,
+      "prevalence": 0.523,
+      "se_auc_at_0.70": 0.1293,
+      "power_to_detect_0.70": 0.261,
+      "power_sim_0.70": 0.404,
+      "power_sim_0.70_se_at_null": 0.289,
+      "se_auc_at_0.50": 0.1443,
+      "min_detectable_auc_80pct": 0.861,
+      "required_total_n_auc070": 63,
+      "cohort_labeled_n": 132
+    },
+    {
+      "target": "target_her2",
+      "target_display": "HER2",
+      "set": "nested_oof_pool",
+      "n_pos": 60,
+      "n_neg": 55,
+      "n_total": 115,
+      "prevalence": 0.523,
+      "se_auc_at_0.70": 0.0484,
+      "power_to_detect_0.70": 0.974,
+      "power_sim_0.70": null,
+      "power_sim_0.70_se_at_null": null,
+      "se_auc_at_0.50": 0.0541,
+      "min_detectable_auc_80pct": 0.649,
+      "required_total_n_auc070": null,
+      "cohort_labeled_n": 132
+    }
+  ],
+  "method_notes": {
+    "auc_variance": "Hanley & McNeil (1982)",
+    "alpha": 0.05,
+    "test": "Wald test on the AUC against H0: AUROC = 0.50; rejection when the lower limit of the 95% Hanley-McNeil interval exceeds 0.50 (one-sided at alpha/2)",
+    "analytic_power": "power_to_detect_0.70: normal-approximation power using the Hanley-McNeil SE evaluated at the NULL (AUROC = 0.50)",
+    "simulation": "power_sim_0.70: 2000 binormal simulations (positives ~ N(mu,1), negatives ~ N(0,1), mu = sqrt(2)*Phi^-1(0.70)); rejection uses the SE evaluated at the OBSERVED AUC, which is the interval the manuscript reports",
+    "n_simulations": 2000,
+    "reconciliation": "power_sim_0.70_se_at_null repeats the simulation with the SE evaluated at the null, matching the analytic rule; it agrees with power_to_detect_0.70 to within Monte-Carlo error. The 9-14 point gap between the analytic and simulated columns is therefore a difference of test, not a disagreement: the Hanley-McNeil SE is smaller at AUROC 0.70 than at 0.50 (see se_auc_at_0.50 versus se_auc_at_0.70), so an observed-AUC interval rejects more often.",
+    "required_n": "increase n at fixed prevalence until power>=0.80 (alpha=0.05, two-sided)"
+  }
+}

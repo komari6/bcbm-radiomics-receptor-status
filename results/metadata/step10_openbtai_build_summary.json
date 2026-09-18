@@ -1,0 +1,56 @@
+{
+  "step": "step_10_build_openbtai_external_proxy_dataset",
+  "completed_at": "2026-04-30T08:16:33.558946",
+  "input_files": {
+    "clinical": "OpenBTAI_METS_ClinicalData_Nov2023.xlsx",
+    "radiomics": "OpenBTAI_RADIOMICS.xlsx",
+    "morphology": "OpenBTAI_MORPHOLOGICAL_MEASUREMENTS.xlsx"
+  },
+  "row_counts": {
+    "clinical": 161,
+    "radiomics": 1276,
+    "morphology": 499,
+    "merged_lesion": 1276,
+    "patient_level": 75,
+    "breast_lesion": 358,
+    "breast_patient": 22
+  },
+  "patients": {
+    "all": 75,
+    "breast": 22
+  },
+  "primary_tumor_counts": {
+    "NSCLC": 38,
+    "Breast": 22,
+    "Melanoma": 6,
+    "SCLC": 5,
+    "Ovary": 2,
+    "Uterus": 1,
+    "Kidney": 1
+  },
+  "breast_subtype_counts": {
+    "HER2-enriched": 13,
+    "Luminal B": 4,
+    "Luminal A": 2,
+    "null": 2,
+    "Triple Negative": 1
+  },
+  "proxy_label_coverage_breast": {
+    "external_er_proxy": 7,
+    "external_pr_proxy": 7,
+    "external_her2_proxy": 20,
+    "external_tnbc_proxy": 20
+  },
+  "direct_receptor_coverage_breast": {
+    "direct_er_bin": 0,
+    "direct_pr_bin": 0,
+    "direct_her2_bin": 0
+  },
+  "n_radiomics_features": 1134,
+  "outputs": {
+    "external_ready_dir": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\external_ready",
+    "primary_file": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\external_ready\\openbtai_breast_only_patient_level_proxy_ready.csv",
+    "feature_dictionary": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\external_ready\\openbtai_feature_dictionary.json",
+    "summary_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\step10_openbtai_build_summary.json"
+  }
+}

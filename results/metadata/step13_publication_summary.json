@@ -1,0 +1,165 @@
+{
+  "config": {
+    "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+    "step_name": "step_13_figures_and_reports",
+    "output_dir": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package",
+    "global_seed": 42,
+    "save_zip": true,
+    "dpi": 300,
+    "max_heatmap_features": 20,
+    "max_violin_features": 6
+  },
+  "input_shapes": {
+    "step03": [
+      1841,
+      179
+    ],
+    "step04": [
+      139,
+      765
+    ],
+    "step05_results": [
+      12,
+      41
+    ],
+    "step07_results": [
+      6,
+      45
+    ],
+    "step08_results": [
+      3,
+      45
+    ],
+    "step09_results": [
+      9,
+      50
+    ]
+  },
+  "figures": [
+    {
+      "figure": "fig_00_graphical_abstract",
+      "success": true,
+      "section": "Title / Graphical Abstract",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_00_graphical_abstract.png"
+    },
+    {
+      "figure": "fig_01_cohort_consort",
+      "success": true,
+      "section": "Methods",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_01_cohort_consort.png"
+    },
+    {
+      "figure": "fig_02_label_distribution",
+      "success": true,
+      "section": "Methods",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_02_label_distribution.png"
+    },
+    {
+      "figure": "fig_03_scanner_audit",
+      "success": true,
+      "section": "Methods",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_03_scanner_audit.png"
+    },
+    {
+      "figure": "fig_04_feature_importance_heatmap",
+      "success": true,
+      "section": "Radiomics Features",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_04_feature_importance_heatmap.png"
+    },
+    {
+      "figure": "fig_05_radiomics_violin",
+      "success": true,
+      "section": "Radiomics Features",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_05_radiomics_violin.png"
+    },
+    {
+      "figure": "fig_06_roc_curves",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_06_roc_curves.png"
+    },
+    {
+      "figure": "fig_07_pr_curves",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_07_pr_curves.png"
+    },
+    {
+      "figure": "fig_08_performance_summary_bar",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_08_performance_summary_bar.png"
+    },
+    {
+      "figure": "fig_09_confusion_matrices",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_09_confusion_matrices.png"
+    },
+    {
+      "figure": "fig_10_model_comparison_heatmap",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_10_model_comparison_heatmap.png"
+    },
+    {
+      "figure": "fig_11_mil_attention_schematic",
+      "success": true,
+      "section": "MIL / Multi-lesion",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_11_mil_attention_schematic.png"
+    },
+    {
+      "figure": "fig_12_mil_vs_tabular",
+      "success": true,
+      "section": "MIL / Multi-lesion",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_12_mil_vs_tabular.png"
+    },
+    {
+      "figure": "fig_13_generalization_gap",
+      "success": true,
+      "section": "Discussion",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_13_generalization_gap.png"
+    },
+    {
+      "figure": "fig_14_feature_stability",
+      "success": true,
+      "section": "Discussion",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_14_feature_stability.png"
+    },
+    {
+      "figure": "fig_15_cross_stage_comparison",
+      "success": true,
+      "section": "Model Performance",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_15_cross_stage_comparison.png"
+    },
+    {
+      "figure": "fig_S1_lesion_category_breakdown",
+      "success": true,
+      "section": "Supplementary",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_S1_lesion_category_breakdown.png"
+    },
+    {
+      "figure": "fig_S2_patient_lesion_burden",
+      "success": true,
+      "section": "Supplementary",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_S2_patient_lesion_burden.png"
+    },
+    {
+      "figure": "fig_S3_field_strength_split_balance",
+      "success": true,
+      "section": "Supplementary",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_S3_field_strength_split_balance.png"
+    },
+    {
+      "figure": "fig_S4_feature_missingness",
+      "success": true,
+      "section": "Supplementary",
+      "output_path": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step13_publication_package\\fig_S4_feature_missingness.png"
+    }
+  ],
+  "notes": {
+    "integration": "Publication figure suite produced by Step 13 (reporting).",
+    "probability_note": "ROC/PR curves are approximated from stored operating-point metrics when raw probabilities are unavailable.",
+    "selection_policy": "Figures prefer Step 05 nested-CV/global-best outputs and Step 07 validation-selected MIL outputs when available."
+  }
+}

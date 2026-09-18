@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+patient_original_firstorder_range_std,35.0,model_native
+patient_meta_age_max,0.0,model_native
+patient_meta_n_components_max,0.0,model_native
+patient_meta_n_components_min,0.0,model_native
+patient_original_glszm_largeareahighgraylevelemphasis_std,0.0,model_native

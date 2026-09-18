@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+entropy_magnetic_field_strength_patient,0.0,abs_coefficient
+n_unique_field_strength_patient,0.0,abs_coefficient
+patient_meta_age_max,0.0,abs_coefficient
+patient_meta_n_components_max,0.0,abs_coefficient
+patient_meta_n_components_std,0.0,abs_coefficient

@@ -1,0 +1,28 @@
+{
+  "Pixel_Spacing": [
+    "[0.5, 0.5]",
+    "[0.99803078174591, 0.99803078174591]"
+  ],
+  "Manufacturer": [
+    "SIEMENS"
+  ],
+  "Sex": [
+    "Female"
+  ],
+  "ER": [
+    "+",
+    "-"
+  ],
+  "PR": [
+    "+",
+    "-"
+  ],
+  "HER2": [
+    "+",
+    "-"
+  ],
+  "case_source_column": [
+    "FilenamePrefix",
+    "matched_mask_file"
+  ]
+}

@@ -1,0 +1,5 @@
+﻿FilenamePrefix,Segmentation_Name,missing_mapping,missing_clinical,missing_any,reason
+BCBM-RadioGenomics-76-0,mask_Plan1_TgtA_200Gy50,True,False,True,missing_image_or_mask_mapping
+BCBM-RadioGenomics-76-0,mask_Plan2_TgtA_200Gy50,True,False,True,missing_image_or_mask_mapping
+BCBM-RadioGenomics-76-0,mask_Plan2_TgtB_200Gy50,True,False,True,missing_image_or_mask_mapping
+BCBM-RadioGenomics-76-0,mask_Plan2_TgtC_200Gy80,True,False,True,missing_image_or_mask_mapping

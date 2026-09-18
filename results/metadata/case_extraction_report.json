@@ -1,0 +1,15 @@
+{
+  "n_rows": 2825,
+  "n_rows_with_case_id": 2825,
+  "n_rows_without_case_id": 0,
+  "n_unique_case_id": 268,
+  "n_unique_patient_base": 165,
+  "case_source_column_counts": {
+    "matched_mask_file": 2821,
+    "FilenamePrefix": 4
+  },
+  "image_abs_exists_count": 2821,
+  "image_abs_missing_count": 4,
+  "mask_abs_exists_count": 2821,
+  "mask_abs_missing_count": 4
+}

@@ -1,0 +1,26 @@
+# Environment for steps 16 and 18 only, which require PyRadiomics.
+#
+# PyRadiomics has no wheel for Python >= 3.12 and does not build against NumPy 2.x
+# (it relies on numpy.distutils, removed in NumPy 2). It therefore needs this
+# separate Python 3.7 environment rather than the project's main .venv.
+#
+#   conda env create -f environment_radiomics.yml
+#   conda run -n bcbm_radiomics python src/analysis/step_16_preprocessing_sensitivity.py
+#
+# Invoke via `conda run`. Calling the environment's python.exe directly leaves
+# <env>\Library\bin off PATH on Windows and NumPy fails to load its DLLs.
+
+name: bcbm_radiomics
+channels:
+  - radiomics
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pyradiomics
+  - numpy=1.21.6
+  - libblas=*=*openblas
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - nibabel
+  - openpyxl

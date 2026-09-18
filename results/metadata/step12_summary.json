@@ -1,0 +1,65 @@
+{
+  "config": {
+    "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+    "step_name": "step_12_combat_eb_and_statistical_comparison",
+    "input_patient_level_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step04_patient_level.csv",
+    "input_feature_dict_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\step04_feature_dictionary.json",
+    "step05_results_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step05master_model_results.csv",
+    "step05_global_best_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step05master_global_best_models_by_target.csv",
+    "step11_predictions_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step11_openbtai_external_proxy_predictions.csv",
+    "target_columns": [
+      "target_er",
+      "target_pr",
+      "target_her2"
+    ],
+    "feature_variants": [
+      "radiomics_pure",
+      "all_features"
+    ],
+    "combat_modes": [
+      "none",
+      "simple_combat",
+      "eb_combat"
+    ],
+    "global_seed": 42,
+    "outer_cv_splits": 5,
+    "inner_cv_splits": 3,
+    "bootstrap_n": 3000,
+    "bootstrap_alpha": 0.05,
+    "eb_prior_strength": 8.0,
+    "run_ebcombat_sensitivity": true,
+    "run_internal_pairwise_comparison": true,
+    "run_external_pairwise_comparison": true,
+    "save_plots": true,
+    "save_zip": true
+  },
+  "input_shape": {
+    "rows": 139,
+    "columns": 765
+  },
+  "feature_set_sizes": {
+    "radiomics_pure": 642,
+    "radiomics_plus_burden": 717,
+    "all_features": 742,
+    "acquisition_only": 25
+  },
+  "batch_labels_available": true,
+  "outputs": {
+    "ebcombat_sensitivity_results_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step12_ebcombat_sensitivity_results.csv",
+    "locked_test_predictions_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step12_locked_test_predictions.csv",
+    "ebcombat_sensitivity_figure": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step12_ebcombat_sensitivity_auroc.png",
+    "internal_pairwise_comparison_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step12_internal_pairwise_model_comparison.csv",
+    "internal_pairwise_figure": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\figures\\step12_internal_pairwise_auc_differences.png",
+    "external_pairwise_comparison_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step12_external_pairwise_model_comparison.csv",
+    "summary_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\step12_summary.json",
+    "publication_zip": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\step12_combat_eb_statistical_comparison_package.zip"
+  },
+  "method_notes": {
+    "eb_combat": "Empirical-shrinkage ComBat-style sensitivity; fit on train/trainval only.",
+    "statistical_comparison": "DeLong test plus paired bootstrap AUROC difference; paired bootstrap preferred for small cohorts."
+  },
+  "n_sensitivity_rows": 18,
+  "n_internal_prediction_rows": 294,
+  "n_internal_pairwise_rows": 45,
+  "n_external_pairwise_rows": 1
+}
