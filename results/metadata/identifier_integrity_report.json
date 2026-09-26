@@ -1,0 +1,14 @@
+{
+  "identifier_columns_present": true,
+  "missing_case_id_rows": 0,
+  "missing_patient_base_rows": 0,
+  "missing_visit_index_rows": 0,
+  "n_case_to_patient_conflicts": 0,
+  "n_case_to_visit_conflicts": 0,
+  "case_to_patient_conflict_case_ids": [],
+  "case_to_patient_conflict_examples": {},
+  "case_to_visit_conflict_case_ids": [],
+  "case_to_visit_conflict_examples": {},
+  "patients_with_multiple_cases": 60,
+  "max_cases_per_patient": 10
+}

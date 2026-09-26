@@ -1,0 +1,26 @@
+{
+  "ER_bin": {
+    "present": true,
+    "non_missing": 1833,
+    "unique_values": [
+      0.0,
+      1.0
+    ]
+  },
+  "PR_bin": {
+    "present": true,
+    "non_missing": 1821,
+    "unique_values": [
+      0.0,
+      1.0
+    ]
+  },
+  "HER2_bin": {
+    "present": true,
+    "non_missing": 1802,
+    "unique_values": [
+      0.0,
+      1.0
+    ]
+  }
+}

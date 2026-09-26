@@ -1,0 +1,16 @@
+﻿setting,target,auc,n_patients,n_features
+"binWidth=25, native",ER,0.5416,134,56
+"binWidth=25, native",PR,0.5305,131,56
+"binWidth=25, native",HER2,0.5336,131,56
+"binWidth=10, native",ER,0.5124,134,56
+"binWidth=10, native",PR,0.5426,131,56
+"binWidth=10, native",HER2,0.5233,131,56
+"binWidth=50, native",ER,0.5039,134,56
+"binWidth=50, native",PR,0.539,131,56
+"binWidth=50, native",HER2,0.5373,131,56
+"binWidth=25, 1mm iso",ER,0.5319,135,56
+"binWidth=25, 1mm iso",PR,0.4828,132,56
+"binWidth=25, 1mm iso",HER2,0.5275,132,56
+"binWidth=25, z-norm",ER,0.4887,134,56
+"binWidth=25, z-norm",PR,0.5408,131,56
+"binWidth=25, z-norm",HER2,0.5364,131,56

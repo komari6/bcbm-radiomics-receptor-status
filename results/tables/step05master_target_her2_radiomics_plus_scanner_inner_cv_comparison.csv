@@ -1,0 +1,10 @@
+﻿target,target_display,scenario,feature_set_variant,model,model_display,mean_inner_cv_auroc,std_inner_cv_auroc,n_outer_folds_as_winner
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,xgb,XGBoost,0.5453968253968253,0.03273655299397658,3
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net,Elastic Net (L1+L2),0.5403769841269842,0.02811732664563174,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net_sparse,Elastic Net (Sparse),0.5334623015873016,0.02848061377362058,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,extra_trees,Extra Trees,0.5334126984126983,0.06632937991728582,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,pls_logistic,PLS + Logistic,0.5261111111111111,0.03232838870951179,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net_strong,Elastic Net (Strong),0.525218253968254,0.038574225027636536,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,svm_linear,Linear SVM (Calibrated),0.504623015873016,0.051515387909672215,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,lgbm_strong,LightGBM (Strong Reg.),0.5044146825396826,0.05043970218613862,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_scanner,lgbm,LightGBM,0.49063492063492065,0.04243449277708738,0

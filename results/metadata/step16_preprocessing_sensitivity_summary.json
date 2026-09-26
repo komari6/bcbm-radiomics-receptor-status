@@ -1,0 +1,137 @@
+{
+  "step": "step_16_preprocessing_sensitivity",
+  "settings": [
+    "binWidth=25, native",
+    "binWidth=10, native",
+    "binWidth=50, native",
+    "binWidth=25, 1mm iso",
+    "binWidth=25, z-norm"
+  ],
+  "auc_spread_by_target": [
+    {
+      "target": "ER",
+      "min": 0.4887,
+      "max": 0.5416,
+      "range": 0.05289999999999995
+    },
+    {
+      "target": "HER2",
+      "min": 0.5233,
+      "max": 0.5373,
+      "range": 0.014000000000000012
+    },
+    {
+      "target": "PR",
+      "min": 0.4828,
+      "max": 0.5426,
+      "range": 0.059799999999999964
+    }
+  ],
+  "results": [
+    {
+      "setting": "binWidth=25, native",
+      "target": "ER",
+      "auc": 0.5416,
+      "n_patients": 134,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, native",
+      "target": "PR",
+      "auc": 0.5305,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, native",
+      "target": "HER2",
+      "auc": 0.5336,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=10, native",
+      "target": "ER",
+      "auc": 0.5124,
+      "n_patients": 134,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=10, native",
+      "target": "PR",
+      "auc": 0.5426,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=10, native",
+      "target": "HER2",
+      "auc": 0.5233,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=50, native",
+      "target": "ER",
+      "auc": 0.5039,
+      "n_patients": 134,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=50, native",
+      "target": "PR",
+      "auc": 0.539,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=50, native",
+      "target": "HER2",
+      "auc": 0.5373,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, 1mm iso",
+      "target": "ER",
+      "auc": 0.5319,
+      "n_patients": 135,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, 1mm iso",
+      "target": "PR",
+      "auc": 0.4828,
+      "n_patients": 132,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, 1mm iso",
+      "target": "HER2",
+      "auc": 0.5275,
+      "n_patients": 132,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, z-norm",
+      "target": "ER",
+      "auc": 0.4887,
+      "n_patients": 134,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, z-norm",
+      "target": "PR",
+      "auc": 0.5408,
+      "n_patients": 131,
+      "n_features": 56
+    },
+    {
+      "setting": "binWidth=25, z-norm",
+      "target": "HER2",
+      "auc": 0.5364,
+      "n_patients": 131,
+      "n_features": 56
+    }
+  ]
+}

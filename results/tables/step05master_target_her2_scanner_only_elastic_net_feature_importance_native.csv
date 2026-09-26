@@ -1,0 +1,4 @@
+﻿feature,importance,importance_type
+dominant_field_strength_t,0.21483475692364618,abs_coefficient
+n_unique_field_strength_patient,0.1925360648243755,abs_coefficient
+entropy_magnetic_field_strength_patient,0.06963494503371523,abs_coefficient

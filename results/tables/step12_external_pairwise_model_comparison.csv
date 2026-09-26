@@ -1,0 +1,2 @@
+﻿status,note
+skipped_single_external_prediction_source_per_target,"Step11 currently provides one external prediction source per target, so paired model comparison is not applicable."

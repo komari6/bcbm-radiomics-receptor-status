@@ -1,0 +1,19 @@
+{
+  "radiomics_rows": 2825,
+  "clinical_rows": 268,
+  "mapping_rows_after_dedup": 2809,
+  "final_rows": 2825,
+  "final_columns": 125,
+  "radiomics_duplicate_key_groups": 12,
+  "mapping_duplicate_key_groups_before_dedup": 12,
+  "clinical_duplicate_case_id_groups": 0,
+  "missing_mapping_rows": 4,
+  "missing_clinical_rows": 0,
+  "missing_any_rows": 4,
+  "notes": [
+    "Final file is radiomics-driven: one row per radiomics row.",
+    "Radiomics-to-mapping merge uses many_to_one because duplicate radiomics keys can exist.",
+    "Clinical data is merged by case using FilenamePrefix == case_id.",
+    "Mapping segmentation names are reconstructed from mask filenames to match radiomics Segmentation_Name."
+  ]
+}

@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the associated paper."
+title: "MRI radiomics does not predict receptor status in breast-cancer brain metastases: analysis pipeline"
+abstract: >-
+  Leakage-controlled nested cross-validation pipeline evaluating whether MRI radiomic features
+  predict oestrogen receptor, progesterone receptor and HER2 status in breast-cancer brain
+  metastases, together with permutation-null, power, preprocessing-sensitivity, optimism-benchmark
+  and external feature-transfer analyses. The study reports a negative result.
+type: software
+license: MIT
+authors:
+  - family-names: Alomari
+    given-names: Khaled Mohammad
+    email: Khaled.alomari@adu.ac.ae
+    orcid: "https://orcid.org/0000-0001-6677-6301"
+    affiliation: "Faculty of Information Technology, Abu Dhabi University, Abu Dhabi, United Arab Emirates"
+  - family-names: Alomari
+    given-names: Waleed Mohammad
+    orcid: "https://orcid.org/0009-0005-5314-4782"
+    affiliation: "Siemens Healthineers, Melbourne, Australia"
+  - family-names: Salloum
+    given-names: Said A.
+    orcid: "https://orcid.org/0000-0002-6073-3981"
+    affiliation: "College of Engineering and Technology, Fujairah University, Fujairah, United Arab Emirates"
+  - family-names: Maghaydah
+    given-names: Safwan
+    orcid: "https://orcid.org/0000-0003-2477-1187"
+    affiliation: "Faculty of Information Technology, Abu Dhabi University, Abu Dhabi, United Arab Emirates"
+  - family-names: Eraki
+    given-names: Mohamed E.
+    affiliation: "Department of General and Laparoscopic Surgery, Faculty of Medicine, Zagazig University, Zagazig, Egypt"
+  - family-names: Hayek
+    given-names: Muhammad Ali
+    affiliation: "Burjeel Specialty Hospital, Sharjah, United Arab Emirates"
+version: 1.1.0
+date-released: 2026-09-26
+keywords:
+  - radiomics
+  - brain metastases
+  - breast cancer
+  - MRI
+  - nested cross-validation
+  - data leakage
+  - reproducibility
+  - negative results
+references:
+  - type: data
+    title: >-
+      MRI Dataset of Metastatic Breast Cancer to the Brain with Expert-reviewed Segmentations and
+      Tumor-derived Radiomic Features (Version 1)
+    authors:
+      - family-names: Taha
+        given-names: B.
+      - family-names: Wu
+        given-names: D.
+      - family-names: Sabal
+        given-names: L.
+      - family-names: Kollitz
+        given-names: M.
+      - family-names: Venteicher
+        given-names: A.
+      - family-names: Watanabe
+        given-names: Y.
+    year: 2025
+    publisher:
+      name: The Cancer Imaging Archive
+    doi: 10.7937/RRSE-W278
+    license: CC-BY-4.0
+
+repository-code: "https://github.com/komari6/bcbm-radiomics-receptor-status"

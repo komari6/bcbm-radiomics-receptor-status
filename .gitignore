@@ -1,0 +1,36 @@
+# ─── Imaging data: never commit ───────────────────────────────────────────────
+# BCBM-RadioGenomics is public (CC BY 4.0) but is not re-hosted here — download
+# it from TCIA. UCSF-BMSR and anything derived from it is Data Use Agreement
+# controlled and MUST NOT be transferred outside the licensee's organization.
+# Anchored to the repository root so that src/data/ (pipeline code) is NOT matched.
+/bcbm_project/data/
+/data/
+/external_ucsf_bmsr/
+**/step18_cache_external_features.csv
+*.nii
+*.nii.gz
+*.dcm
+*.mha
+*.nrrd
+
+# ─── Regenerable caches and model artefacts ───────────────────────────────────
+*.npz
+checkpoints/
+*.pt
+*.pth
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ─── Tooling / OS ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+.pytest_cache/
+Thumbs.db
+.DS_Store

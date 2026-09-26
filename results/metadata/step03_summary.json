@@ -1,0 +1,73 @@
+{
+  "n_rows": 2825,
+  "n_columns": 179,
+  "n_unique_patients": 165,
+  "n_unique_cases": 268,
+  "n_radiomics_columns": 107,
+  "initial_mask_category_counts": {
+    "lesion": 1914,
+    "target": 803,
+    "other_structure": 78,
+    "cavity_or_bed": 19,
+    "unclear": 11
+  },
+  "final_mask_category_counts": {
+    "lesion": 1924,
+    "target": 803,
+    "other_structure": 78,
+    "cavity_or_bed": 19,
+    "manual_review_required": 1
+  },
+  "needs_manual_review_final_count": 1,
+  "analysis_candidate_final_count": 1841,
+  "label_non_null_counts": {
+    "ER_bin": 2716,
+    "PR_bin": 2704,
+    "HER2_bin": 2677
+  },
+  "mask_feature_coverage": {
+    "mask_read_ok_count": 2821,
+    "mask_read_failed_count": 0
+  },
+  "performance_summary": {
+    "early_text_resolutions": 2814,
+    "actual_mask_reads": 2809,
+    "cache_hits": 12,
+    "cache_misses": 2809,
+    "force_mask_extraction": true
+  },
+  "validated_descriptor_decisions_used": {
+    "bs": "other_structure",
+    "right_motor_strip": "other_structure",
+    "r_hiccpocampus": "other_structure",
+    "right_foramen_of_monro": "other_structure",
+    "rlatvent": "other_structure",
+    "rtlatcllum": "other_structure",
+    "r_infpar": "other_structure",
+    "pineal_region": "lesion",
+    "aneurysm": "lesion",
+    "angioma": "lesion",
+    "l_frntl": "lesion",
+    "r_frntl": "lesion",
+    "latposttem": "lesion",
+    "lcsup": "lesion",
+    "left_fp": "lesion",
+    "leftvent": "other_structure",
+    "lftsupfro": "lesion",
+    "linflatcbm": "lesion",
+    "llatposfro": "lesion",
+    "ltinfcrblm": "lesion",
+    "ltmedposfr": "lesion",
+    "rtinfcrblm": "lesion",
+    "rtmedcrblm": "lesion",
+    "rtpossupcb": "lesion"
+  },
+  "fixes_applied": {
+    "tum_tumo_added_to_strict_lesion_terms": true,
+    "op_to_optic_replacement_removed": true,
+    "radiomics_prefix_anchoring_consistent": true
+  },
+  "lesion_only_rows": 1841,
+  "lesion_only_unique_patients": 139,
+  "lesion_only_unique_cases": 236
+}

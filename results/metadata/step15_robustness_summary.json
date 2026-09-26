@@ -1,0 +1,56 @@
+{
+  "step": "step_15_robustness_null",
+  "variant": "radiomics_pure",
+  "n_splits": 5,
+  "n_permutations": 10000,
+  "n_seeds": 25,
+  "input": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step04_patient_level.csv",
+  "reduced_pipeline": "impute(median)->variance->corr(0.88)->ComBat(in-fold)->RobustScaler->elastic-net (stability selection omitted for tractability)",
+  "results": [
+    {
+      "target": "target_er",
+      "display": "ER",
+      "observed_oof_auc": 0.5579,
+      "null_mean": 0.4983,
+      "null_p95": 0.5808,
+      "permutation_p_value": 0.1196,
+      "seed_auc_mean": 0.5022,
+      "seed_auc_sd": 0.0383,
+      "brier": 0.2648,
+      "n_permutations": 10000,
+      "n_seeds": 25,
+      "n_null_ge_observed": 1195,
+      "permutation_p_mc_se": 0.00324
+    },
+    {
+      "target": "target_pr",
+      "display": "PR",
+      "observed_oof_auc": 0.6066,
+      "null_mean": 0.5026,
+      "null_p95": 0.5885,
+      "permutation_p_value": 0.0202,
+      "seed_auc_mean": 0.5757,
+      "seed_auc_sd": 0.03,
+      "brier": 0.2438,
+      "n_permutations": 10000,
+      "n_seeds": 25,
+      "n_null_ge_observed": 201,
+      "permutation_p_mc_se": 0.00141
+    },
+    {
+      "target": "target_her2",
+      "display": "HER2",
+      "observed_oof_auc": 0.5786,
+      "null_mean": 0.5009,
+      "null_p95": 0.585,
+      "permutation_p_value": 0.065,
+      "seed_auc_mean": 0.5025,
+      "seed_auc_sd": 0.0422,
+      "brier": 0.2485,
+      "n_permutations": 10000,
+      "n_seeds": 25,
+      "n_null_ge_observed": 649,
+      "permutation_p_mc_se": 0.00247
+    }
+  ]
+}

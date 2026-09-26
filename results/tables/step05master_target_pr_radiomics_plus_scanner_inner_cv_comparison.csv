@@ -1,0 +1,10 @@
+﻿target,target_display,scenario,feature_set_variant,model,model_display,mean_inner_cv_auroc,std_inner_cv_auroc,n_outer_folds_as_winner
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,xgb,XGBoost,0.5013636363636363,0.03322723818991,2
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net_sparse,Elastic Net (Sparse),0.500959595959596,0.05075676092186223,2
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,lgbm,LightGBM,0.4963513708513709,0.0699154574196376,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net,Elastic Net (L1+L2),0.487997113997114,0.06868885272456778,1
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,lgbm_strong,LightGBM (Strong Reg.),0.4852561327561328,0.065311082220214,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,elastic_net_strong,Elastic Net (Strong),0.4820822510822511,0.06615583062160597,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,svm_linear,Linear SVM (Calibrated),0.48178932178932177,0.06138899562782568,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,pls_logistic,PLS + Logistic,0.47854689754689755,0.05683120547043803,0
+target_pr,PR,nested_cv_leakage_safe,radiomics_plus_scanner,extra_trees,Extra Trees,0.46273448773448767,0.07541579606267776,0
