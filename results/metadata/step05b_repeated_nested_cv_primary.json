@@ -1,0 +1,8 @@
+{
+ "input": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step04_patient_level.csv",
+ "repeats": 10,
+ "outer_splits": 5,
+ "inner_splits": 3,
+ "seed_base": 42,
+ "runtime_minutes": 940.6
+}

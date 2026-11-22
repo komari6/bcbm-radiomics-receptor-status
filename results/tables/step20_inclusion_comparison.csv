@@ -1,0 +1,19 @@
+﻿comparison,variable,type,included_n,included_median,included_q1,included_q3,excluded_n,excluded_median,excluded_q1,excluded_q3,smd,test,p_value,included_count,included_prop,excluded_count,excluded_prop
+included_vs_all_excluded,age_first_exam,continuous,140,59.0,50.75,64.0,25,59.0,55.0,66.0,-0.35223210492450735,Mann-Whitney U,0.25649752639516843,,,,
+included_vs_all_excluded,year_first_exam,continuous,140,2014.0,2010.0,2016.0,25,2009.0,2008.0,2012.0,0.8153713746068787,Mann-Whitney U,0.0006068818487943313,,,,
+included_vs_all_excluded,n_examinations,continuous,140,1.0,1.0,2.0,25,1.0,1.0,1.0,0.5792494174041434,Mann-Whitney U,0.00658065049621999,,,,
+included_vs_all_excluded,n_lesion_masks,continuous,140,4.0,2.0,6.25,25,2.0,1.0,4.0,0.25966968245582633,Mann-Whitney U,0.0062364910730224035,,,,
+included_vs_all_excluded,total_lesion_volume_cc,continuous,140,3.8667499999999997,0.8870625000000001,12.0975625,23,1.65375,0.8466250000000001,4.4725,0.4877541983948578,Mann-Whitney U,0.17503624347202307,,,,
+included_vs_all_excluded,field_strength_3t,binary,138,,,,25,,,,0.16798874859441543,Fisher exact,0.6942349322930078,11.0,0.07971014492753623,1.0,0.04
+included_vs_all_excluded,ER_positive,binary,136,,,,2,,,,-0.04413913002092607,Fisher exact,1.0,65.0,0.47794117647058826,1.0,0.5
+included_vs_all_excluded,PR_positive,binary,133,,,,2,,,,-0.3321032708970018,Fisher exact,1.0,45.0,0.3383458646616541,1.0,0.5
+included_vs_all_excluded,HER2_positive,binary,133,,,,2,,,,1.4907119849998598,Fisher exact,0.22996130458817032,70.0,0.5263157894736842,0.0,0.0
+included_vs_no_receptor_label,age_first_exam,continuous,140,59.0,50.75,64.0,23,59.0,55.5,66.5,-0.4018889388345835,Mann-Whitney U,0.17701155841856997,,,,
+included_vs_no_receptor_label,year_first_exam,continuous,140,2014.0,2010.0,2016.0,23,2009.0,2008.0,2011.0,1.0752165314539028,Mann-Whitney U,3.7300023055331175e-05,,,,
+included_vs_no_receptor_label,n_examinations,continuous,140,1.0,1.0,2.0,23,1.0,1.0,1.0,0.5617294018355107,Mann-Whitney U,0.01160923576808238,,,,
+included_vs_no_receptor_label,n_lesion_masks,continuous,140,4.0,2.0,6.25,23,2.0,1.0,4.0,0.24928810689646014,Mann-Whitney U,0.02814439717610439,,,,
+included_vs_no_receptor_label,total_lesion_volume_cc,continuous,140,3.8667499999999997,0.8870625000000001,12.0975625,23,1.65375,0.8466250000000001,4.4725,0.4877541983948578,Mann-Whitney U,0.17503624347202307,,,,
+included_vs_no_receptor_label,field_strength_3t,binary,138,,,,23,,,,0.15113398071880554,Fisher exact,1.0,11.0,0.07971014492753623,1.0,0.043478260869565216
+included_vs_no_receptor_label,ER_positive,binary,136,,,,0,,,,,Fisher exact,,65.0,0.47794117647058826,0.0,
+included_vs_no_receptor_label,PR_positive,binary,133,,,,0,,,,,Fisher exact,,45.0,0.3383458646616541,0.0,
+included_vs_no_receptor_label,HER2_positive,binary,133,,,,0,,,,,Fisher exact,,70.0,0.5263157894736842,0.0,

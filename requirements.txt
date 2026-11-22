@@ -1,0 +1,42 @@
+# Exact versions of the run that produced every number in the paper (verified 2026-09-06).
+# Results are deterministic within this set but NOT stable across library versions:
+# re-running step 05 under different scikit-learn/xgboost builds shifts nested-CV AUC by up to 0.06.
+# Steps 16 and 18 run in the separate PyRadiomics environment (environment_radiomics.yml:
+# Python 3.7.12, numpy 1.21.6, scikit-learn 1.0.2, pyradiomics 3.1.0a2, SimpleITK 2.1.1.1).
+# Python >= 3.10 required
+# GPU: tested on NVIDIA RTX 4050 (6GB VRAM), CUDA 12.x
+#
+# Install all:          pip install -r requirements.txt
+# Core only (no DL):   pip install numpy pandas matplotlib scikit-learn openpyxl
+#
+# Optional packages degrade gracefully:
+#   xgboost      → falls back to ExtraTreesClassifier (step 05)
+#   torch / torchvision → steps 07-09 skip if absent
+#   nibabel / SimpleITK → NIfTI reads skipped if both absent (steps 03, 06, 08-10)
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+numpy==2.4.6
+pandas==3.0.3
+matplotlib==3.11.0
+scikit-learn==1.9.0
+openpyxl==3.1.5
+# ── Excel legacy (.xls only — not needed for .xlsx) ───────────────────────────
+xlrd>=2.0
+
+# ── Optional: gradient boosting ───────────────────────────────────────────────
+# Both are try/except-guarded, but lgbm_strong is the selected best model for PR,
+# so omitting lightgbm silently changes that result.
+xgboost==3.2.0
+lightgbm==4.7.0
+# ── Optional: figure styling (step 13; falls back to matplotlib defaults) ─────
+seaborn==0.13.2
+# ── Optional: public radiomics benchmark collection (step 17 only) ────────────
+radMLBench==1.1
+# ── Optional: deep learning (steps 07, 08, 09) ────────────────────────────────
+torch==2.12.1
+torchvision>=0.16   # CPU build used for the published run
+
+# ── Optional: NIfTI image I/O (steps 03, 06, 08, 09, 10) ─────────────────────
+# Install at least one. nibabel is preferred; SimpleITK is the fallback.
+nibabel==5.4.2
+SimpleITK>=2.3

@@ -1,0 +1,4 @@
+﻿target,display,observed_oof_auc,null_mean,null_p95,permutation_p_value,seed_auc_mean,seed_auc_sd,brier,n_permutations,n_seeds,n_null_ge_observed,permutation_p_mc_se
+target_er,ER,0.4377,0.4959,0.6043,0.8094,0.459,0.0486,0.313,10000,25,8094,0.00393
+target_pr,PR,0.5086,0.498,0.6107,0.4512,0.5199,0.0302,0.2675,10000,25,4511,0.00498
+target_her2,HER2,0.4966,0.4971,0.6069,0.5074,0.5229,0.0341,0.3041,10000,25,5074,0.005

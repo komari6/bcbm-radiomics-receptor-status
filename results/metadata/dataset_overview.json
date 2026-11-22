@@ -1,0 +1,12 @@
+{
+  "n_rows": 2825,
+  "n_columns": 141,
+  "memory_usage_mb": 9.329,
+  "n_unique_patients": 165,
+  "n_unique_cases": 268,
+  "n_unique_segmentation_names": 1081,
+  "image_abs_exists_count": 2821,
+  "image_abs_missing_count": 4,
+  "mask_abs_exists_count": 2821,
+  "mask_abs_missing_count": 4
+}

@@ -1,0 +1,88 @@
+{
+  "n_rows": 2825,
+  "n_columns": 180,
+  "n_unique_patients": 165,
+  "n_unique_cases": 268,
+  "n_radiomics_columns": 107,
+  "initial_mask_category_counts": {
+    "lesion": 1923,
+    "target": 803,
+    "other_structure": 62,
+    "cavity_or_bed": 19,
+    "unclear": 10,
+    "manual_review_required": 7,
+    "non_metastatic": 1
+  },
+  "final_mask_category_counts": {
+    "lesion": 1607,
+    "target": 803,
+    "lesion_derivative": 326,
+    "other_structure": 62,
+    "cavity_or_bed": 19,
+    "manual_review_required": 7,
+    "non_metastatic": 1
+  },
+  "needs_manual_review_final_count": 7,
+  "analysis_candidate_final_count": 1522,
+  "label_non_null_counts": {
+    "ER_bin": 2716,
+    "PR_bin": 2704,
+    "HER2_bin": 2677
+  },
+  "mask_feature_coverage": {
+    "mask_read_ok_count": 2821,
+    "mask_read_failed_count": 0
+  },
+  "performance_summary": {
+    "early_text_resolutions": 2815,
+    "actual_mask_reads": 2809,
+    "cache_hits": 12,
+    "cache_misses": 2809,
+    "force_mask_extraction": true
+  },
+  "validated_descriptor_decisions_used": {
+    "bs": "other_structure",
+    "right_motor_strip": "other_structure",
+    "r_hiccpocampus": "other_structure",
+    "right_foramen_of_monro": "lesion",
+    "rlatvent": "manual_review_required",
+    "rtlatcllum": "lesion",
+    "r_infpar": "lesion",
+    "l_brainstem_tumor": "lesion",
+    "l_corpus_callosum_tumor": "lesion",
+    "brainstem_met": "lesion",
+    "rbrainstem": "lesion",
+    "medulla": "lesion",
+    "an": "non_metastatic",
+    "left_brainstem": "manual_review_required",
+    "right_posterior_brainstem": "manual_review_required",
+    "right_lateral_medulla": "manual_review_required",
+    "corpus_callosum": "manual_review_required",
+    "r_hippocampus": "manual_review_required",
+    "pineal_region": "lesion",
+    "aneurysm": "lesion",
+    "angioma": "lesion",
+    "l_frntl": "lesion",
+    "r_frntl": "lesion",
+    "latposttem": "lesion",
+    "lcsup": "lesion",
+    "left_fp": "lesion",
+    "leftvent": "manual_review_required",
+    "lftsupfro": "lesion",
+    "linflatcbm": "lesion",
+    "llatposfro": "lesion",
+    "ltinfcrblm": "lesion",
+    "ltmedposfr": "lesion",
+    "rtinfcrblm": "lesion",
+    "rtmedcrblm": "lesion",
+    "rtpossupcb": "lesion"
+  },
+  "fixes_applied": {
+    "tum_tumo_added_to_strict_lesion_terms": true,
+    "op_to_optic_replacement_removed": true,
+    "radiomics_prefix_anchoring_consistent": true
+  },
+  "lesion_only_rows": 1522,
+  "lesion_only_unique_patients": 140,
+  "lesion_only_unique_cases": 237
+}

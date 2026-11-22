@@ -1,0 +1,27 @@
+{
+  "step_name": "step_01_project_initialization",
+  "completed_at": "2026-04-29T19:29:24.309394",
+  "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+  "script_dir": "D:\\PycharmProjects\\bcbm_project",
+  "copied_excel": true,
+  "copied_raw_folder": true,
+  "overwrite_existing": false,
+  "input_xlsx_original": "D:\\PycharmProjects\\bcbm_project\\BCBM_Full_Data.xlsx",
+  "input_xlsx_project_copy": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM_Full_Data.xlsx",
+  "raw_dataset_source_dir": "D:\\PycharmProjects\\bcbm_project\\BCBM-RadioGenomics_Images_Masks_Dec2024",
+  "raw_dataset_project_copy_dir": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM-RadioGenomics_Images_Masks_Dec2024",
+  "dataset_shape": {
+    "n_rows": 2825,
+    "n_columns": 125
+  },
+  "artifacts": {
+    "input_xlsx_project_copy": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM_Full_Data.xlsx",
+    "raw_dataset_project_copy_dir": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM-RadioGenomics_Images_Masks_Dec2024",
+    "project_config_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\project_config.json",
+    "initial_data_profile_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\initial_data_profile.json",
+    "dataset_preview_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\interim\\dataset_head.csv",
+    "columns_txt": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\columns.txt",
+    "manifest_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\manifest.json",
+    "log_file": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\logs\\step_01_project_initialization.log"
+  }
+}

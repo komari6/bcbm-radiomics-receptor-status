@@ -1,0 +1,18 @@
+{
+  "project_name": "bcbm_radiogenomics",
+  "created_at": "2026-04-29T19:29:14.735722",
+  "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+  "script_dir": "D:\\PycharmProjects\\bcbm_project",
+  "input_xlsx_original": "D:\\PycharmProjects\\bcbm_project\\BCBM_Full_Data.xlsx",
+  "input_xlsx_project_copy": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM_Full_Data.xlsx",
+  "raw_dataset_source_dir": "D:\\PycharmProjects\\bcbm_project\\BCBM-RadioGenomics_Images_Masks_Dec2024",
+  "raw_dataset_project_copy_dir": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\raw\\BCBM-RadioGenomics_Images_Masks_Dec2024",
+  "copy_xlsx_to_project": true,
+  "copy_raw_folder_to_project": true,
+  "overwrite_existing": false,
+  "global_seed": 42,
+  "dataframe_info": {
+    "n_rows": 2825,
+    "n_columns": 125
+  }
+}

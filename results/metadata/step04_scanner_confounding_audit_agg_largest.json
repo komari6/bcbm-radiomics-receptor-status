@@ -1,0 +1,82 @@
+{
+  "enabled": true,
+  "field_strength_column_used": "magnetic_field_strength_t",
+  "patient_dominant_field_strength_column": "dominant_field_strength_t",
+  "available": true,
+  "n_lesion_rows_with_field_strength": 1520,
+  "lesion_field_strength_counts": {
+    "1.5T": 1048,
+    "3T": 472,
+    "missing": 2
+  },
+  "patient_field_strength_counts": {
+    "1.5": 127,
+    "3.0": 11,
+    "missing": 2
+  },
+  "label_vs_field_strength": {
+    "target_er": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 62,
+          "1.0": 62
+        },
+        "3.0": {
+          "0.0": 7,
+          "1.0": 3
+        }
+      },
+      "p_value_chi2": 0.37429223242912313
+    },
+    "target_pr": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 79,
+          "1.0": 43
+        },
+        "3.0": {
+          "0.0": 9,
+          "1.0": 1
+        }
+      },
+      "p_value_chi2": 0.20080974265394805
+    },
+    "target_her2": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 60,
+          "1.0": 62
+        },
+        "3.0": {
+          "0.0": 3,
+          "1.0": 8
+        }
+      },
+      "p_value_chi2": 0.28082007523922564
+    }
+  },
+  "radiomics_shift_screening": [],
+  "radiomics_shift_unit_of_analysis": "patient",
+  "radiomics_shift_test": "two-sided Mann-Whitney U, 1.5 T versus 3 T",
+  "radiomics_shift_group_sizes": {
+    "n_group_1_5T": 127,
+    "n_group_3T": 11
+  },
+  "n_radiomics_shift_features_tested": 0,
+  "n_radiomics_shift_features_p_lt_0_05": 0,
+  "n_radiomics_shift_features_p_lt_0_0001": 0,
+  "n_radiomics_shift_features_bh_lt_0_05": 0,
+  "radiomics_shift_screening_lesion_level_contrast": {
+    "note": "Lesions treated as independent, which they are not: this is reported only to show how much the apparent effect inflates when the unit of analysis is wrong.",
+    "group_sizes": {
+      "n_group_1_5T": 1048,
+      "n_group_3T": 472,
+      "n_patients_1_5T": 132,
+      "n_patients_3T": 12
+    },
+    "n_features_tested": 107,
+    "n_p_lt_0_05": 105,
+    "n_p_lt_0_0001": 102,
+    "n_bh_lt_0_05": 105
+  }
+}

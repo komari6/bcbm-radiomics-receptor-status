@@ -1,0 +1,5 @@
+﻿label,n_positive,n_negative,n_missing,n_total
+external_er_proxy,6,1,15,22
+external_pr_proxy,6,1,15,22
+external_her2_proxy,13,7,2,22
+external_tnbc_proxy,1,19,2,22

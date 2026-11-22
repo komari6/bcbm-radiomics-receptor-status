@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+patient_original_ngtdm_strength_mean,0.13263876350387901,abs_coefficient
+patient_original_gldm_dependencevariance_mean,0.0,abs_coefficient
+patient_original_gldm_largedependencehighgraylevelemphasis_max,0.0,abs_coefficient
+patient_original_shape_elongation_mean,0.0,abs_coefficient
+patient_meta_mask_fill_ratio_in_bbox_min,0.0,abs_coefficient

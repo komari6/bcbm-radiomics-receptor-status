@@ -1,0 +1,2998 @@
+{
+  "config": {
+    "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+    "step_name": "step_06_image_baseline_modeling",
+    "input_step03_lesion_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step03_lesion_only.csv",
+    "input_step04_patient_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\data\\processed\\analysis_ready_step04_patient_level.csv",
+    "input_step05_summary_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\step05master_summary.json",
+    "input_step05_results_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step05master_model_results.csv",
+    "input_feature_dict_json": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\metadata\\step04_feature_dictionary.json",
+    "target_columns": [
+      "target_er",
+      "target_pr",
+      "target_her2"
+    ],
+    "modality_variants": [
+      "image_only",
+      "radiomics_only",
+      "scanner_only",
+      "image_plus_radiomics",
+      "hybrid_all"
+    ],
+    "global_seed": 42,
+    "prediction_threshold_grid": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65
+    ],
+    "image_hist_bins": 12,
+    "image_pca_components": 12,
+    "save_plots": true,
+    "save_publication_package": true,
+    "min_required_train_rows": 10,
+    "min_required_valid_rows": 4,
+    "min_required_test_rows": 4,
+    "min_class_count_train": 2,
+    "max_bootstrap": 1000
+  },
+  "input_shapes": {
+    "lesion_rows": 1841,
+    "patient_rows": 139,
+    "patient_image_augmented_rows": 139,
+    "patient_image_augmented_cols": 627
+  },
+  "modality_feature_set_sizes": {
+    "image_only": 186,
+    "radiomics_only": 377,
+    "scanner_only": 8,
+    "image_plus_radiomics": 563,
+    "hybrid_all": 571
+  },
+  "targets": {
+    "target_er": {
+      "image_only": {
+        "target": "target_er",
+        "display_name": "ER",
+        "modality_variant": "image_only",
+        "n_input_features": 186,
+        "best_model_name": "elastic_net",
+        "best_threshold": 0.5,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6444444444444445,
+          "AUPRC": 0.7379346092503987,
+          "F1": 0.625,
+          "Balanced_Acc": 0.6944444444444444,
+          "Precision": 0.8333333333333334,
+          "Recall_Sensitivity": 0.5,
+          "Specificity": 0.8888888888888888,
+          "TN": 8,
+          "FP": 1,
+          "FN": 5,
+          "TP": 5
+        },
+        "best_model_test_metrics": {
+          "target": "target_er",
+          "target_display": "ER",
+          "modality_variant": "image_only",
+          "model": "elastic_net",
+          "model_display": "Elastic Net Logistic",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.5,
+          "n_train": 100,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 186,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.48,
+          "valid_positive_rate": 0.5263157894736842,
+          "test_positive_rate": 0.4375,
+          "AUROC": 0.7301587301587301,
+          "AUPRC": 0.6732993197278911,
+          "F1": 0.5,
+          "Balanced_Acc": 0.6031746031746031,
+          "Precision": 0.6,
+          "Recall_Sensitivity": 0.42857142857142855,
+          "Specificity": 0.7777777777777778,
+          "TN": 7,
+          "FP": 2,
+          "FN": 4,
+          "TP": 3,
+          "validation_AUROC_at_selection": 0.6444444444444445,
+          "generalization_gap_AUROC": -0.08571428571428563,
+          "auroc_bootstrap_ci95_lower": 0.4332142857142857,
+          "auroc_bootstrap_ci95_upper": 0.9584659090909089,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [
+          {
+            "feature": "patient_img_hist_bin_10_median",
+            "importance": 0.4396081793192798,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_04_median",
+            "importance": 0.3915366546347288,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_07_max",
+            "importance": 0.2990488155165436,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_08_mean",
+            "importance": 0.19131498029080984,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.1160550054520137,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_mean",
+            "importance": 0.0776563547410181,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_intensity_std_median",
+            "importance": 0.07117018980960216,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_median",
+            "importance": 0.05658010034810252,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_volume_cc_median",
+            "importance": 0.013712720457195115,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_zscore_std_max",
+            "importance": 0.0,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_intensity_iqr_median",
+            "importance": 0.0,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_foreground_fraction_median",
+            "importance": 0.0,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "patient_img_hist_bin_04_median",
+            "importance": 0.09126984126984121,
+            "importance_std": 0.09088947657112535,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_10_median",
+            "importance": 0.06111111111111105,
+            "importance_std": 0.10721925553683685,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_std_median",
+            "importance": 0.05317460317460312,
+            "importance_std": 0.025235100151721677,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_volume_cc_median",
+            "importance": 0.04603174603174599,
+            "importance_std": 0.022947352848890407,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_08_mean",
+            "importance": 0.021428571428571387,
+            "importance_std": 0.05794737884530735,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.01984126984126976,
+            "importance_std": 0.03544874830813861,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_median",
+            "importance": 0.011111111111111054,
+            "importance_std": 0.026130281957387824,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_07_max",
+            "importance": 0.009523809523809467,
+            "importance_std": 0.05709874840826969,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_mean",
+            "importance": 0.0047619047619046895,
+            "importance_std": 0.030158730158730173,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_mean_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p75_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p50_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_iqr_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p90_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_gradient_energy_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_bbox_fill_ratio_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_foreground_fraction_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_mean_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_spacing_x_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_spacing_y_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "radiomics_only": {
+        "target": "target_er",
+        "display_name": "ER",
+        "modality_variant": "radiomics_only",
+        "n_input_features": 377,
+        "best_model_name": "svm_linear",
+        "best_threshold": 0.5,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6777777777777778,
+          "AUPRC": 0.7209523809523809,
+          "F1": 0.5,
+          "Balanced_Acc": 0.5888888888888889,
+          "Precision": 0.6666666666666666,
+          "Recall_Sensitivity": 0.4,
+          "Specificity": 0.7777777777777778,
+          "TN": 7,
+          "FP": 2,
+          "FN": 6,
+          "TP": 4
+        },
+        "best_model_test_metrics": {
+          "target": "target_er",
+          "target_display": "ER",
+          "modality_variant": "radiomics_only",
+          "model": "svm_linear",
+          "model_display": "Linear SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.5,
+          "n_train": 100,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 377,
+          "n_selected_features": 20,
+          "train_positive_rate": 0.48,
+          "valid_positive_rate": 0.5263157894736842,
+          "test_positive_rate": 0.4375,
+          "AUROC": 0.4603174603174603,
+          "AUPRC": 0.5431166056166057,
+          "F1": 0.3076923076923077,
+          "Balanced_Acc": 0.42063492063492064,
+          "Precision": 0.3333333333333333,
+          "Recall_Sensitivity": 0.2857142857142857,
+          "Specificity": 0.5555555555555556,
+          "TN": 5,
+          "FP": 4,
+          "FN": 5,
+          "TP": 2,
+          "validation_AUROC_at_selection": 0.6777777777777778,
+          "generalization_gap_AUROC": 0.21746031746031752,
+          "auroc_bootstrap_ci95_lower": 0.14989583333333334,
+          "auroc_bootstrap_ci95_upper": 0.7917162698412697,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.13333333333333333,
+            "importance_std": 0.05883731108841472,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_energy_std",
+            "importance": 0.06428571428571425,
+            "importance_std": 0.04153607653374453,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_energy_iqr",
+            "importance": 0.05714285714285712,
+            "importance_std": 0.021531206295635773,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_ngtdm_complexity_std",
+            "importance": 0.04920634920634918,
+            "importance_std": 0.024539087037683028,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_max",
+            "importance": 0.03650793650793647,
+            "importance_std": 0.06311395349863821,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_std",
+            "importance": 0.032539682539682535,
+            "importance_std": 0.023260874428179118,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_ngtdm_complexity_iqr",
+            "importance": 0.030952380952380943,
+            "importance_std": 0.014612660825017434,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_iqr",
+            "importance": 0.011904761904761904,
+            "importance_std": 0.009880872696816452,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_std",
+            "importance": 0.01111111111111111,
+            "importance_std": 0.008837721210841304,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_std_mean",
+            "importance": 0.01111111111111111,
+            "importance_std": 0.008837721210841304,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_mean",
+            "importance": 0.010317460317460317,
+            "importance_std": 0.009083748525602856,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_mean",
+            "importance": 0.010317460317460286,
+            "importance_std": 0.03185497181014202,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.008730158730158727,
+            "importance_std": 0.015450732011056971,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_mean",
+            "importance": 0.008730158730158696,
+            "importance_std": 0.04331763190157202,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_iqr",
+            "importance": 0.0047619047619047615,
+            "importance_std": 0.008837721210841304,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_min",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_std",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_cv",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_iqr",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "scanner_only": {
+        "target": "target_er",
+        "display_name": "ER",
+        "modality_variant": "scanner_only",
+        "n_input_features": 8,
+        "best_model_name": "logistic",
+        "best_threshold": 0.3,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6000000000000001,
+          "AUPRC": 0.6,
+          "F1": 0.7142857142857143,
+          "Balanced_Acc": 0.5555555555555556,
+          "Precision": 0.5555555555555556,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.1111111111111111,
+          "TN": 1,
+          "FP": 8,
+          "FN": 0,
+          "TP": 10
+        },
+        "best_model_test_metrics": {
+          "target": "target_er",
+          "target_display": "ER",
+          "modality_variant": "scanner_only",
+          "model": "logistic",
+          "model_display": "Logistic Regression",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.3,
+          "n_train": 100,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 8,
+          "n_selected_features": 3,
+          "train_positive_rate": 0.48,
+          "valid_positive_rate": 0.5263157894736842,
+          "test_positive_rate": 0.4375,
+          "AUROC": 0.5555555555555556,
+          "AUPRC": 0.4666666666666667,
+          "F1": 0.6363636363636364,
+          "Balanced_Acc": 0.5555555555555556,
+          "Precision": 0.4666666666666667,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.1111111111111111,
+          "TN": 1,
+          "FP": 8,
+          "FN": 0,
+          "TP": 7,
+          "validation_AUROC_at_selection": 0.6000000000000001,
+          "generalization_gap_AUROC": 0.04444444444444451,
+          "auroc_bootstrap_ci95_lower": 0.5,
+          "auroc_bootstrap_ci95_upper": 0.6875,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.5326754115254483,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.2936918247407747,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.20537584701447248,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.0888888888888889,
+            "importance_std": 0.05819143739626465,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "magnetic_field_strength_label",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_manufacturer_mode",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "image_plus_radiomics": {
+        "target": "target_er",
+        "display_name": "ER",
+        "modality_variant": "image_plus_radiomics",
+        "n_input_features": 563,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.35,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.47777777777777786,
+          "AUPRC": 0.6238901376401376,
+          "F1": 0.6923076923076923,
+          "Balanced_Acc": 0.5611111111111111,
+          "Precision": 0.5625,
+          "Recall_Sensitivity": 0.9,
+          "Specificity": 0.2222222222222222,
+          "TN": 2,
+          "FP": 7,
+          "FN": 1,
+          "TP": 9
+        },
+        "best_model_test_metrics": {
+          "target": "target_er",
+          "target_display": "ER",
+          "modality_variant": "image_plus_radiomics",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.35,
+          "n_train": 100,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 563,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.48,
+          "valid_positive_rate": 0.5263157894736842,
+          "test_positive_rate": 0.4375,
+          "AUROC": 0.5555555555555556,
+          "AUPRC": 0.5873626373626374,
+          "F1": 0.6,
+          "Balanced_Acc": 0.5396825396825397,
+          "Precision": 0.46153846153846156,
+          "Recall_Sensitivity": 0.8571428571428571,
+          "Specificity": 0.2222222222222222,
+          "TN": 2,
+          "FP": 7,
+          "FN": 1,
+          "TP": 6,
+          "validation_AUROC_at_selection": 0.47777777777777786,
+          "generalization_gap_AUROC": -0.07777777777777772,
+          "auroc_bootstrap_ci95_lower": 0.25,
+          "auroc_bootstrap_ci95_upper": 0.8834722222222221,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.1293650793650794,
+            "importance_std": 0.05684999910808325,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_mean",
+            "importance": 0.05912698412698416,
+            "importance_std": 0.0866307196222133,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_max",
+            "importance": 0.05873015873015876,
+            "importance_std": 0.04843221048378527,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_std_mean",
+            "importance": 0.04246031746031749,
+            "importance_std": 0.05762992376252792,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_std",
+            "importance": 0.04246031746031749,
+            "importance_std": 0.05762992376252792,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.029365079365079393,
+            "importance_std": 0.07278690808387302,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glrlm_runlengthnonuniformity_iqr",
+            "importance": 0.02460317460317464,
+            "importance_std": 0.08346173026148793,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_mean",
+            "importance": 0.02460317460317463,
+            "importance_std": 0.036705812951895816,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_iqr",
+            "importance": 0.0166666666666667,
+            "importance_std": 0.06891064684558727,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_cv",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_std",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_min",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_label_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_mask_descriptor_canonical_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_pixel_spacing_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_segmentation_name_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_cv_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_cv_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "iqr_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_burden_fraction",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "hybrid_all": {
+        "target": "target_er",
+        "display_name": "ER",
+        "modality_variant": "hybrid_all",
+        "n_input_features": 571,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.35,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.47777777777777786,
+          "AUPRC": 0.6238901376401376,
+          "F1": 0.6923076923076923,
+          "Balanced_Acc": 0.5611111111111111,
+          "Precision": 0.5625,
+          "Recall_Sensitivity": 0.9,
+          "Specificity": 0.2222222222222222,
+          "TN": 2,
+          "FP": 7,
+          "FN": 1,
+          "TP": 9
+        },
+        "best_model_test_metrics": {
+          "target": "target_er",
+          "target_display": "ER",
+          "modality_variant": "hybrid_all",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.35,
+          "n_train": 100,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 571,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.48,
+          "valid_positive_rate": 0.5263157894736842,
+          "test_positive_rate": 0.4375,
+          "AUROC": 0.5555555555555556,
+          "AUPRC": 0.5873626373626374,
+          "F1": 0.6,
+          "Balanced_Acc": 0.5396825396825397,
+          "Precision": 0.46153846153846156,
+          "Recall_Sensitivity": 0.8571428571428571,
+          "Specificity": 0.2222222222222222,
+          "TN": 2,
+          "FP": 7,
+          "FN": 1,
+          "TP": 6,
+          "validation_AUROC_at_selection": 0.47777777777777786,
+          "generalization_gap_AUROC": -0.07777777777777772,
+          "auroc_bootstrap_ci95_lower": 0.25,
+          "auroc_bootstrap_ci95_upper": 0.8834722222222221,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.1293650793650794,
+            "importance_std": 0.05684999910808325,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_mean",
+            "importance": 0.05912698412698416,
+            "importance_std": 0.0866307196222133,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_max",
+            "importance": 0.05873015873015876,
+            "importance_std": 0.04843221048378527,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_std_mean",
+            "importance": 0.04246031746031749,
+            "importance_std": 0.05762992376252792,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_std",
+            "importance": 0.04246031746031749,
+            "importance_std": 0.05762992376252792,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.029365079365079393,
+            "importance_std": 0.07278690808387302,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glrlm_runlengthnonuniformity_iqr",
+            "importance": 0.02460317460317464,
+            "importance_std": 0.08346173026148793,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_mean",
+            "importance": 0.02460317460317463,
+            "importance_std": 0.036705812951895816,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_iqr",
+            "importance": 0.0166666666666667,
+            "importance_std": 0.06891064684558727,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_to_second_largest_volume_ratio",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mad_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "magnetic_field_strength_label",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mask_category_entropy_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "max_field_strength_t",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "max_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mean_field_strength_t",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mean_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "median_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "min_field_strength_t",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      }
+    },
+    "target_pr": {
+      "image_only": {
+        "target": "target_pr",
+        "display_name": "PR",
+        "modality_variant": "image_only",
+        "n_input_features": 186,
+        "best_model_name": "logistic",
+        "best_threshold": 0.5,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.4615384615384615,
+          "AUPRC": 0.4405284043441938,
+          "F1": 0.42857142857142855,
+          "Balanced_Acc": 0.5576923076923077,
+          "Precision": 0.375,
+          "Recall_Sensitivity": 0.5,
+          "Specificity": 0.6153846153846154,
+          "TN": 8,
+          "FP": 5,
+          "FN": 3,
+          "TP": 3
+        },
+        "best_model_test_metrics": {
+          "target": "target_pr",
+          "target_display": "PR",
+          "modality_variant": "image_only",
+          "model": "logistic",
+          "model_display": "Logistic Regression",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.5,
+          "n_train": 97,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 186,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.35051546391752575,
+          "valid_positive_rate": 0.3157894736842105,
+          "test_positive_rate": 0.3125,
+          "AUROC": 0.8363636363636364,
+          "AUPRC": 0.7933333333333333,
+          "F1": 0.7272727272727273,
+          "Balanced_Acc": 0.8090909090909091,
+          "Precision": 0.6666666666666666,
+          "Recall_Sensitivity": 0.8,
+          "Specificity": 0.8181818181818182,
+          "TN": 9,
+          "FP": 2,
+          "FN": 1,
+          "TP": 4,
+          "validation_AUROC_at_selection": 0.4615384615384615,
+          "generalization_gap_AUROC": -0.3748251748251749,
+          "auroc_bootstrap_ci95_lower": 0.5449810606060606,
+          "auroc_bootstrap_ci95_upper": 1.0,
+          "auroc_bootstrap_n_valid": 996
+        },
+        "top_native_features": [
+          {
+            "feature": "patient_img_central_slice_stat_2_min",
+            "importance": 0.8557934276621453,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_mean",
+            "importance": 0.8403441200328347,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_max",
+            "importance": 0.6953053389589622,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_5_median",
+            "importance": 0.5801681484181253,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_median",
+            "importance": 0.5644486341034995,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_10_median",
+            "importance": 0.5272606419521663,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_intensity_max_max",
+            "importance": 0.32128329117676796,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_max",
+            "importance": 0.2774829114142872,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_mean",
+            "importance": 0.14722112379961882,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_hist_bin_10_mean",
+            "importance": 0.08130736516164858,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_zscore_std_max",
+            "importance": 0.07827210245737391,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.05220917955983867,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "patient_img_central_slice_stat_2_min",
+            "importance": 0.0681818181818182,
+            "importance_std": 0.08087844159013935,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_10_median",
+            "importance": 0.06545454545454552,
+            "importance_std": 0.059307296110182164,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_mean",
+            "importance": 0.06454545454545459,
+            "importance_std": 0.05676543005726969,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_max",
+            "importance": 0.05818181818181821,
+            "importance_std": 0.06913873942484199,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_5_median",
+            "importance": 0.03909090909090915,
+            "importance_std": 0.0683392122714646,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_median",
+            "importance": 0.028181818181818235,
+            "importance_std": 0.05468920451889102,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_max_max",
+            "importance": 0.025454545454545514,
+            "importance_std": 0.04959338798903948,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_01_max",
+            "importance": 0.017272727272727294,
+            "importance_std": 0.030137426280455952,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_std_max",
+            "importance": 0.010909090909090941,
+            "importance_std": 0.01941286954914784,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_10_mean",
+            "importance": 0.0027272727272727613,
+            "importance_std": 0.01653945945332748,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p75_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p90_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_mean_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_iqr_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_foreground_fraction_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_bbox_fill_ratio_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_spacing_x_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_gradient_energy_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_4_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_spacing_y_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "radiomics_only": {
+        "target": "target_pr",
+        "display_name": "PR",
+        "modality_variant": "radiomics_only",
+        "n_input_features": 377,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.35,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.4871794871794871,
+          "AUPRC": 0.36338702147525676,
+          "F1": 0.47619047619047616,
+          "Balanced_Acc": 0.532051282051282,
+          "Precision": 0.3333333333333333,
+          "Recall_Sensitivity": 0.8333333333333334,
+          "Specificity": 0.23076923076923078,
+          "TN": 3,
+          "FP": 10,
+          "FN": 1,
+          "TP": 5
+        },
+        "best_model_test_metrics": {
+          "target": "target_pr",
+          "target_display": "PR",
+          "modality_variant": "radiomics_only",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.35,
+          "n_train": 97,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 377,
+          "n_selected_features": 20,
+          "train_positive_rate": 0.35051546391752575,
+          "valid_positive_rate": 0.3157894736842105,
+          "test_positive_rate": 0.3125,
+          "AUROC": 0.7454545454545455,
+          "AUPRC": 0.7214285714285715,
+          "F1": 0.5333333333333333,
+          "Balanced_Acc": 0.6272727272727273,
+          "Precision": 0.4,
+          "Recall_Sensitivity": 0.8,
+          "Specificity": 0.45454545454545453,
+          "TN": 5,
+          "FP": 6,
+          "FN": 1,
+          "TP": 4,
+          "validation_AUROC_at_selection": 0.4871794871794871,
+          "generalization_gap_AUROC": -0.25827505827505837,
+          "auroc_bootstrap_ci95_lower": 0.38341346153846145,
+          "auroc_bootstrap_ci95_upper": 1.0,
+          "auroc_bootstrap_n_valid": 996
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_firstorder_energy_mean",
+            "importance": 0.040000000000000015,
+            "importance_std": 0.06768912897813195,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glszm_largeareahighgraylevelemphasis_iqr",
+            "importance": 0.038181818181818206,
+            "importance_std": 0.06082083157700994,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_max",
+            "importance": 0.026363636363636374,
+            "importance_std": 0.03612421179328279,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_iqr",
+            "importance": 0.021818181818181827,
+            "importance_std": 0.034783866308561805,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.015454545454545476,
+            "importance_std": 0.03648842225525361,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_std",
+            "importance": 0.010909090909090913,
+            "importance_std": 0.037877575738181214,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.005454545454545473,
+            "importance_std": 0.059223627181463,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_cv",
+            "importance": 0.0036363636363636377,
+            "importance_std": 0.01958241748048911,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_n_slices_involved_max",
+            "importance": 0.001818181818181852,
+            "importance_std": 0.03090909090909092,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_0_max",
+            "importance": 0.001818181818181852,
+            "importance_std": 0.03090909090909092,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_min",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_std",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacevolumeratio_cv",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_cv_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_cv_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_segmentation_name_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_pixel_spacing_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_mask_descriptor_canonical_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "scanner_only": {
+        "target": "target_pr",
+        "display_name": "PR",
+        "modality_variant": "scanner_only",
+        "n_input_features": 8,
+        "best_model_name": "logistic",
+        "best_threshold": 0.4,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.5769230769230769,
+          "AUPRC": 0.35294117647058826,
+          "F1": 0.5217391304347826,
+          "Balanced_Acc": 0.5769230769230769,
+          "Precision": 0.35294117647058826,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.15384615384615385,
+          "TN": 2,
+          "FP": 11,
+          "FN": 0,
+          "TP": 6
+        },
+        "best_model_test_metrics": {
+          "target": "target_pr",
+          "target_display": "PR",
+          "modality_variant": "scanner_only",
+          "model": "logistic",
+          "model_display": "Logistic Regression",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.4,
+          "n_train": 97,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 8,
+          "n_selected_features": 3,
+          "train_positive_rate": 0.35051546391752575,
+          "valid_positive_rate": 0.3157894736842105,
+          "test_positive_rate": 0.3125,
+          "AUROC": 0.5454545454545454,
+          "AUPRC": 0.3333333333333333,
+          "F1": 0.5,
+          "Balanced_Acc": 0.5454545454545454,
+          "Precision": 0.3333333333333333,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.09090909090909091,
+          "TN": 1,
+          "FP": 10,
+          "FN": 0,
+          "TP": 5,
+          "validation_AUROC_at_selection": 0.5769230769230769,
+          "generalization_gap_AUROC": 0.03146853146853146,
+          "auroc_bootstrap_ci95_lower": 0.5,
+          "auroc_bootstrap_ci95_upper": 0.65,
+          "auroc_bootstrap_n_valid": 996
+        },
+        "top_native_features": [
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.6007234505834987,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.21369918503761548,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.15109964642275914,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.06545454545454543,
+            "importance_std": 0.07236272269866323,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "magnetic_field_strength_label",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_manufacturer_mode",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "image_plus_radiomics": {
+        "target": "target_pr",
+        "display_name": "PR",
+        "modality_variant": "image_plus_radiomics",
+        "n_input_features": 563,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.35,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.5897435897435898,
+          "AUPRC": 0.4442460317460317,
+          "F1": 0.5217391304347826,
+          "Balanced_Acc": 0.5769230769230769,
+          "Precision": 0.35294117647058826,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.15384615384615385,
+          "TN": 2,
+          "FP": 11,
+          "FN": 0,
+          "TP": 6
+        },
+        "best_model_test_metrics": {
+          "target": "target_pr",
+          "target_display": "PR",
+          "modality_variant": "image_plus_radiomics",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.35,
+          "n_train": 97,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 563,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.35051546391752575,
+          "valid_positive_rate": 0.3157894736842105,
+          "test_positive_rate": 0.3125,
+          "AUROC": 0.709090909090909,
+          "AUPRC": 0.7435897435897435,
+          "F1": 0.5,
+          "Balanced_Acc": 0.5454545454545454,
+          "Precision": 0.3333333333333333,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.09090909090909091,
+          "TN": 1,
+          "FP": 10,
+          "FN": 0,
+          "TP": 5,
+          "validation_AUROC_at_selection": 0.5897435897435898,
+          "generalization_gap_AUROC": -0.11934731934731924,
+          "auroc_bootstrap_ci95_lower": 0.28409090909090906,
+          "auroc_bootstrap_ci95_upper": 1.0,
+          "auroc_bootstrap_n_valid": 996
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_max",
+            "importance": 0.19545454545454535,
+            "importance_std": 0.10299241727685064,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.18363636363636354,
+            "importance_std": 0.06702657669515184,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.16545454545454533,
+            "importance_std": 0.1010523144115655,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_max",
+            "importance": 0.1099999999999999,
+            "importance_std": 0.09194410806715383,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_energy_max",
+            "importance": 0.060909090909090816,
+            "importance_std": 0.10768411103127072,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_5_median",
+            "importance": 0.0463636363636363,
+            "importance_std": 0.026016523675007588,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_std",
+            "importance": 0.03818181818181811,
+            "importance_std": 0.06502383542635513,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_max",
+            "importance": 0.029090909090909008,
+            "importance_std": 0.0915251850811143,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_min",
+            "importance": 0.023636363636363615,
+            "importance_std": 0.014200453956193912,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_mean",
+            "importance": 0.020909090909090884,
+            "importance_std": 0.01751032753114385,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_max",
+            "importance": 0.016363636363636278,
+            "importance_std": 0.07797011506324207,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.005454545454545423,
+            "importance_std": 0.00833195580901057,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_max",
+            "importance": 0.002727272727272678,
+            "importance_std": 0.016539459453327552,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_burden_fraction",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_to_second_largest_volume_ratio",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mad_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mask_category_entropy_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "max_field_strength_t",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "max_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "hybrid_all": {
+        "target": "target_pr",
+        "display_name": "PR",
+        "modality_variant": "hybrid_all",
+        "n_input_features": 571,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.35,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.5897435897435898,
+          "AUPRC": 0.4442460317460317,
+          "F1": 0.5217391304347826,
+          "Balanced_Acc": 0.5769230769230769,
+          "Precision": 0.35294117647058826,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.15384615384615385,
+          "TN": 2,
+          "FP": 11,
+          "FN": 0,
+          "TP": 6
+        },
+        "best_model_test_metrics": {
+          "target": "target_pr",
+          "target_display": "PR",
+          "modality_variant": "hybrid_all",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.35,
+          "n_train": 97,
+          "n_valid": 19,
+          "n_test": 16,
+          "n_input_features": 571,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.35051546391752575,
+          "valid_positive_rate": 0.3157894736842105,
+          "test_positive_rate": 0.3125,
+          "AUROC": 0.709090909090909,
+          "AUPRC": 0.7435897435897435,
+          "F1": 0.5,
+          "Balanced_Acc": 0.5454545454545454,
+          "Precision": 0.3333333333333333,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.09090909090909091,
+          "TN": 1,
+          "FP": 10,
+          "FN": 0,
+          "TP": 5,
+          "validation_AUROC_at_selection": 0.5897435897435898,
+          "generalization_gap_AUROC": -0.11934731934731924,
+          "auroc_bootstrap_ci95_lower": 0.28409090909090906,
+          "auroc_bootstrap_ci95_upper": 1.0,
+          "auroc_bootstrap_n_valid": 996
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_max",
+            "importance": 0.19545454545454535,
+            "importance_std": 0.10299241727685064,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_iqr",
+            "importance": 0.18363636363636354,
+            "importance_std": 0.06702657669515184,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_glcm_clustershade_max",
+            "importance": 0.16545454545454533,
+            "importance_std": 0.1010523144115655,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_totalenergy_max",
+            "importance": 0.1099999999999999,
+            "importance_std": 0.09194410806715383,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_energy_max",
+            "importance": 0.060909090909090816,
+            "importance_std": 0.10768411103127072,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_5_median",
+            "importance": 0.0463636363636363,
+            "importance_std": 0.026016523675007588,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_std",
+            "importance": 0.03818181818181811,
+            "importance_std": 0.06502383542635513,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_range_max",
+            "importance": 0.029090909090909008,
+            "importance_std": 0.0915251850811143,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_min",
+            "importance": 0.023636363636363615,
+            "importance_std": 0.014200453956193912,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_mean",
+            "importance": 0.020909090909090884,
+            "importance_std": 0.01751032753114385,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_firstorder_maximum_max",
+            "importance": 0.016363636363636278,
+            "importance_std": 0.07797011506324207,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.005454545454545423,
+            "importance_std": 0.00833195580901057,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_max",
+            "importance": 0.002727272727272678,
+            "importance_std": 0.016539459453327552,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_label_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "min_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_std_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "iqr_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_burden_fraction",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      }
+    },
+    "target_her2": {
+      "image_only": {
+        "target": "target_her2",
+        "display_name": "HER2",
+        "modality_variant": "image_only",
+        "n_input_features": 186,
+        "best_model_name": "svm_linear",
+        "best_threshold": 0.45,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.5959595959595959,
+          "AUPRC": 0.6734795433324846,
+          "F1": 0.7586206896551724,
+          "Balanced_Acc": 0.6111111111111112,
+          "Precision": 0.6111111111111112,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.2222222222222222,
+          "TN": 2,
+          "FP": 7,
+          "FN": 0,
+          "TP": 11
+        },
+        "best_model_test_metrics": {
+          "target": "target_her2",
+          "target_display": "HER2",
+          "modality_variant": "image_only",
+          "model": "svm_linear",
+          "model_display": "Linear SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.45,
+          "n_train": 95,
+          "n_valid": 20,
+          "n_test": 17,
+          "n_input_features": 186,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.5157894736842106,
+          "valid_positive_rate": 0.55,
+          "test_positive_rate": 0.5294117647058824,
+          "AUROC": 0.7361111111111112,
+          "AUPRC": 0.8038979538979538,
+          "F1": 0.7,
+          "Balanced_Acc": 0.6388888888888888,
+          "Precision": 0.6363636363636364,
+          "Recall_Sensitivity": 0.7777777777777778,
+          "Specificity": 0.5,
+          "TN": 4,
+          "FP": 4,
+          "FN": 2,
+          "TP": 7,
+          "validation_AUROC_at_selection": 0.5959595959595959,
+          "generalization_gap_AUROC": -0.14015151515151525,
+          "auroc_bootstrap_ci95_lower": 0.45443181818181816,
+          "auroc_bootstrap_ci95_upper": 0.9584134615384615,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_img_foreground_fraction_median",
+            "importance": 0.10000000000000006,
+            "importance_std": 0.10772621905369618,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_2_std",
+            "importance": 0.03611111111111116,
+            "importance_std": 0.05185598528498462,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_voxel_count_median",
+            "importance": 0.027083333333333386,
+            "importance_std": 0.07342415987320809,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_volume_cc_median",
+            "importance": 0.027083333333333386,
+            "importance_std": 0.07342415987320809,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_voxel_count_min",
+            "importance": 0.01875000000000005,
+            "importance_std": 0.050130039231316516,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_volume_cc_min",
+            "importance": 0.01875000000000005,
+            "importance_std": 0.050130039231316516,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_05_max",
+            "importance": 0.014583333333333393,
+            "importance_std": 0.033871523328492234,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_08_max",
+            "importance": 0.0111111111111112,
+            "importance_std": 0.03061862178478971,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_04_std",
+            "importance": 0.01041666666666673,
+            "importance_std": 0.015135065776182916,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_foreground_fraction_min",
+            "importance": 0.0027777777777778013,
+            "importance_std": 0.008333333333333349,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_1_std",
+            "importance": 0.0006944444444444808,
+            "importance_std": 0.0302621646798624,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_p90_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_mean_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_zscore_std_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_gradient_energy_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_iqr_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_voxel_count_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_volume_cc_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_mean_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_intensity_std_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "radiomics_only": {
+        "target": "target_her2",
+        "display_name": "HER2",
+        "modality_variant": "radiomics_only",
+        "n_input_features": 377,
+        "best_model_name": "logistic",
+        "best_threshold": 0.3,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6565656565656566,
+          "AUPRC": 0.734039979628215,
+          "F1": 0.7857142857142857,
+          "Balanced_Acc": 0.6666666666666666,
+          "Precision": 0.6470588235294118,
+          "Recall_Sensitivity": 1.0,
+          "Specificity": 0.3333333333333333,
+          "TN": 3,
+          "FP": 6,
+          "FN": 0,
+          "TP": 11
+        },
+        "best_model_test_metrics": {
+          "target": "target_her2",
+          "target_display": "HER2",
+          "modality_variant": "radiomics_only",
+          "model": "logistic",
+          "model_display": "Logistic Regression",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.3,
+          "n_train": 95,
+          "n_valid": 20,
+          "n_test": 17,
+          "n_input_features": 377,
+          "n_selected_features": 20,
+          "train_positive_rate": 0.5157894736842106,
+          "valid_positive_rate": 0.55,
+          "test_positive_rate": 0.5294117647058824,
+          "AUROC": 0.7638888888888888,
+          "AUPRC": 0.7910373577040244,
+          "F1": 0.8,
+          "Balanced_Acc": 0.7569444444444444,
+          "Precision": 0.7272727272727273,
+          "Recall_Sensitivity": 0.8888888888888888,
+          "Specificity": 0.625,
+          "TN": 5,
+          "FP": 3,
+          "FN": 1,
+          "TP": 8,
+          "validation_AUROC_at_selection": 0.6565656565656566,
+          "generalization_gap_AUROC": -0.10732323232323226,
+          "auroc_bootstrap_ci95_lower": 0.48055555555555557,
+          "auroc_bootstrap_ci95_upper": 0.9864583333333331,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [
+          {
+            "feature": "median_lesion_volume_cc",
+            "importance": 0.7861292735242965,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "cv_lesion_volume_cc",
+            "importance": 0.6684180743305315,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_cv",
+            "importance": 0.5887464264996762,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_visits_patient",
+            "importance": 0.4832258815472881,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_cases_patient",
+            "importance": 0.4832258815472881,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_original_ngtdm_complexity_cv",
+            "importance": 0.37983340236754,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_meta_n_slices_involved_min",
+            "importance": 0.34582070625560374,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_0_min",
+            "importance": 0.34582070625560374,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_meta_mask_volume_cc_min",
+            "importance": 0.2664080679081227,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "min_lesion_volume_cc",
+            "importance": 0.2664080679081227,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_meta_mask_voxel_count_min",
+            "importance": 0.266408067908122,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_2_min",
+            "importance": 0.26554771092880003,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "patient_original_gldm_graylevelnonuniformity_cv",
+            "importance": 0.19237748743356126,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "global_radiomics_cv_mean",
+            "importance": 0.15482521285470274,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "entropy_mask_descriptor_canonical_patient",
+            "importance": 0.08987492116945496,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "entropy_segmentation_name_patient",
+            "importance": 0.08193209170967264,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_medium_lesions_gt_0_1cc_le_1cc",
+            "importance": 0.053628322904021794,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_unique_segmentation_name_patient",
+            "importance": 0.03227174865523124,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_unique_segmentation_names_patient",
+            "importance": 0.03227174865523124,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "n_unique_mask_descriptor_canonical_patient",
+            "importance": 0.008622718023605286,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "median_lesion_volume_cc",
+            "importance": 0.21388888888888885,
+            "importance_std": 0.12063361528115814,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_cv",
+            "importance": 0.06111111111111108,
+            "importance_std": 0.08521034250098872,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_ngtdm_complexity_cv",
+            "importance": 0.04722222222222218,
+            "importance_std": 0.034971328644483796,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_0_min",
+            "importance": 0.044444444444444405,
+            "importance_std": 0.06567550231964939,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_n_slices_involved_min",
+            "importance": 0.044444444444444405,
+            "importance_std": 0.06567550231964939,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_visits_patient",
+            "importance": 0.03263888888888885,
+            "importance_std": 0.04126542921318218,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_cases_patient",
+            "importance": 0.03263888888888885,
+            "importance_std": 0.04126542921318218,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "cv_lesion_volume_cc",
+            "importance": 0.024305555555555518,
+            "importance_std": 0.04966613068316312,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_mask_descriptor_canonical_patient",
+            "importance": 0.016666666666666618,
+            "importance_std": 0.016782008296659125,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_segmentation_name_patient",
+            "importance": 0.015972222222222176,
+            "importance_std": 0.016594171035206277,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_mask_volume_cc_min",
+            "importance": 0.013888888888888834,
+            "importance_std": 0.034303025097856855,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_mask_voxel_count_min",
+            "importance": 0.013888888888888834,
+            "importance_std": 0.034303025097856855,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "min_lesion_volume_cc",
+            "importance": 0.013888888888888834,
+            "importance_std": 0.034303025097856855,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_2_min",
+            "importance": 0.013194444444444392,
+            "importance_std": 0.030579220633755556,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_cv_mean",
+            "importance": 0.006944444444444387,
+            "importance_std": 0.02036510874807665,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_label_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_lesions_with_valid_volume",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_cv",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_iqr",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "scanner_only": {
+        "target": "target_her2",
+        "display_name": "HER2",
+        "modality_variant": "scanner_only",
+        "n_input_features": 8,
+        "best_model_name": "elastic_net",
+        "best_threshold": 0.5,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.5909090909090909,
+          "AUPRC": 0.6318181818181818,
+          "F1": 0.3076923076923077,
+          "Balanced_Acc": 0.5909090909090909,
+          "Precision": 1.0,
+          "Recall_Sensitivity": 0.18181818181818182,
+          "Specificity": 1.0,
+          "TN": 9,
+          "FP": 0,
+          "FN": 9,
+          "TP": 2
+        },
+        "best_model_test_metrics": {
+          "target": "target_her2",
+          "target_display": "HER2",
+          "modality_variant": "scanner_only",
+          "model": "elastic_net",
+          "model_display": "Elastic Net Logistic",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.5,
+          "n_train": 95,
+          "n_valid": 20,
+          "n_test": 17,
+          "n_input_features": 8,
+          "n_selected_features": 3,
+          "train_positive_rate": 0.5157894736842106,
+          "valid_positive_rate": 0.55,
+          "test_positive_rate": 0.5294117647058824,
+          "AUROC": 0.5555555555555556,
+          "AUPRC": 0.5816993464052287,
+          "F1": 0.2,
+          "Balanced_Acc": 0.5555555555555556,
+          "Precision": 1.0,
+          "Recall_Sensitivity": 0.1111111111111111,
+          "Specificity": 1.0,
+          "TN": 8,
+          "FP": 0,
+          "FN": 8,
+          "TP": 1,
+          "validation_AUROC_at_selection": 0.5909090909090909,
+          "generalization_gap_AUROC": 0.03535353535353536,
+          "auroc_bootstrap_ci95_lower": 0.5,
+          "auroc_bootstrap_ci95_upper": 0.6875,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.1681750509241919,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.06666749331448699,
+            "importance_type": "abs_coefficient"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.0,
+            "importance_type": "abs_coefficient"
+          }
+        ],
+        "top_permutation_features": [
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.04131944444444445,
+            "importance_std": 0.056308911194750275,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "dominant_manufacturer",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "magnetic_field_strength_label",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_field_strength_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_unique_manufacturer_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_manufacturer_mode",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "image_plus_radiomics": {
+        "target": "target_her2",
+        "display_name": "HER2",
+        "modality_variant": "image_plus_radiomics",
+        "n_input_features": 563,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.55,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6363636363636365,
+          "AUPRC": 0.7055766137105849,
+          "F1": 0.5,
+          "Balanced_Acc": 0.6262626262626263,
+          "Precision": 0.8,
+          "Recall_Sensitivity": 0.36363636363636365,
+          "Specificity": 0.8888888888888888,
+          "TN": 8,
+          "FP": 1,
+          "FN": 7,
+          "TP": 4
+        },
+        "best_model_test_metrics": {
+          "target": "target_her2",
+          "target_display": "HER2",
+          "modality_variant": "image_plus_radiomics",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.55,
+          "n_train": 95,
+          "n_valid": 20,
+          "n_test": 17,
+          "n_input_features": 563,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.5157894736842106,
+          "valid_positive_rate": 0.55,
+          "test_positive_rate": 0.5294117647058824,
+          "AUROC": 0.375,
+          "AUPRC": 0.4965253337802358,
+          "F1": 0.3076923076923077,
+          "Balanced_Acc": 0.4861111111111111,
+          "Precision": 0.5,
+          "Recall_Sensitivity": 0.2222222222222222,
+          "Specificity": 0.75,
+          "TN": 6,
+          "FP": 2,
+          "FN": 7,
+          "TP": 2,
+          "validation_AUROC_at_selection": 0.6363636363636365,
+          "generalization_gap_AUROC": 0.26136363636363646,
+          "auroc_bootstrap_ci95_lower": 0.11098484848484849,
+          "auroc_bootstrap_ci95_upper": 0.6944444444444444,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_img_voxel_count_median",
+            "importance": 0.09027777777777779,
+            "importance_std": 0.12793619406988166,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_2_min",
+            "importance": 0.05277777777777778,
+            "importance_std": 0.08691382137312231,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_graylevelnonuniformity_cv",
+            "importance": 0.03472222222222223,
+            "importance_std": 0.0655137578615042,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_cases_patient",
+            "importance": 0.03194444444444448,
+            "importance_std": 0.021561353744805594,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_visits_patient",
+            "importance": 0.03194444444444448,
+            "importance_std": 0.021561353744805594,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_1_std",
+            "importance": 0.011111111111111117,
+            "importance_std": 0.0376796110173626,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_08_max",
+            "importance": 0.008333333333333342,
+            "importance_std": 0.03551864403484561,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_mask_voxel_count_min",
+            "importance": 0.004861111111111124,
+            "importance_std": 0.06246526812735397,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_voxel_count_min",
+            "importance": 0.004861111111111124,
+            "importance_std": 0.06246526812735397,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_std",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_min",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacearea_iqr",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_std",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_min",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_label_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_image_lesions_used",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      },
+      "hybrid_all": {
+        "target": "target_her2",
+        "display_name": "HER2",
+        "modality_variant": "hybrid_all",
+        "n_input_features": 571,
+        "best_model_name": "svm_rbf",
+        "best_threshold": 0.55,
+        "best_model_valid_threshold_metrics": {
+          "AUROC": 0.6363636363636365,
+          "AUPRC": 0.7055766137105849,
+          "F1": 0.5,
+          "Balanced_Acc": 0.6262626262626263,
+          "Precision": 0.8,
+          "Recall_Sensitivity": 0.36363636363636365,
+          "Specificity": 0.8888888888888888,
+          "TN": 8,
+          "FP": 1,
+          "FN": 7,
+          "TP": 4
+        },
+        "best_model_test_metrics": {
+          "target": "target_her2",
+          "target_display": "HER2",
+          "modality_variant": "hybrid_all",
+          "model": "svm_rbf",
+          "model_display": "RBF SVM",
+          "selected_on": "valid_AUROC",
+          "threshold_selected_on_valid": 0.55,
+          "n_train": 95,
+          "n_valid": 20,
+          "n_test": 17,
+          "n_input_features": 571,
+          "n_selected_features": 12,
+          "train_positive_rate": 0.5157894736842106,
+          "valid_positive_rate": 0.55,
+          "test_positive_rate": 0.5294117647058824,
+          "AUROC": 0.375,
+          "AUPRC": 0.4965253337802358,
+          "F1": 0.3076923076923077,
+          "Balanced_Acc": 0.4861111111111111,
+          "Precision": 0.5,
+          "Recall_Sensitivity": 0.2222222222222222,
+          "Specificity": 0.75,
+          "TN": 6,
+          "FP": 2,
+          "FN": 7,
+          "TP": 2,
+          "validation_AUROC_at_selection": 0.6363636363636365,
+          "generalization_gap_AUROC": 0.26136363636363646,
+          "auroc_bootstrap_ci95_lower": 0.11098484848484849,
+          "auroc_bootstrap_ci95_upper": 0.6944444444444444,
+          "auroc_bootstrap_n_valid": 1000
+        },
+        "top_native_features": [],
+        "top_permutation_features": [
+          {
+            "feature": "patient_img_voxel_count_median",
+            "importance": 0.09027777777777779,
+            "importance_std": 0.12793619406988166,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_bbox_dim_2_min",
+            "importance": 0.05277777777777778,
+            "importance_std": 0.08691382137312231,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_gldm_graylevelnonuniformity_cv",
+            "importance": 0.03472222222222223,
+            "importance_std": 0.0655137578615042,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_cases_patient",
+            "importance": 0.03194444444444448,
+            "importance_std": 0.021561353744805594,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "n_visits_patient",
+            "importance": 0.03194444444444448,
+            "importance_std": 0.021561353744805594,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_central_slice_stat_1_std",
+            "importance": 0.011111111111111117,
+            "importance_std": 0.0376796110173626,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_hist_bin_08_max",
+            "importance": 0.008333333333333342,
+            "importance_std": 0.03551864403484561,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_img_voxel_count_min",
+            "importance": 0.004861111111111124,
+            "importance_std": 0.06246526812735397,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_meta_mask_voxel_count_min",
+            "importance": 0.004861111111111124,
+            "importance_std": 0.06246526812735397,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_sphericity_max",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "min_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "patient_original_shape_surfacevolumeratio_iqr",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "entropy_magnetic_field_strength_label_patient",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "dominant_field_strength_t",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "global_radiomics_std_mean",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "iqr_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_burden_fraction",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "largest_to_second_largest_volume_ratio",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          },
+          {
+            "feature": "mad_lesion_volume_cc",
+            "importance": 0.0,
+            "importance_std": 0.0,
+            "importance_type": "permutation_on_test_locked__roc_auc"
+          }
+        ]
+      }
+    }
+  },
+  "method_notes": {
+    "purpose": "Benchmark image-native features extracted directly from MRI+mask against radiomics/scanner tables and their fusion.",
+    "image_feature_definition": "Intensity, histogram, gradient, geometry, spacing, and central-slice embedding statistics extracted from tumor-masked MRI volumes.",
+    "selection_policy": "All preprocessing and selection are fit on TRAIN only inside sklearn Pipelines. Model family and threshold are chosen on VALID only. TEST remains locked for final evaluation."
+  },
+  "overall_best_by_target": [
+    {
+      "target": "target_er",
+      "target_display": "ER",
+      "modality_variant": "image_only",
+      "model": "elastic_net",
+      "model_display": "Elastic Net Logistic",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.5,
+      "n_train": 100,
+      "n_valid": 19,
+      "n_test": 16,
+      "n_input_features": 186,
+      "n_selected_features": 12,
+      "train_positive_rate": 0.48,
+      "valid_positive_rate": 0.5263157894736842,
+      "test_positive_rate": 0.4375,
+      "AUROC": 0.7301587301587301,
+      "AUPRC": 0.6732993197278911,
+      "F1": 0.5,
+      "Balanced_Acc": 0.6031746031746031,
+      "Precision": 0.6,
+      "Recall_Sensitivity": 0.42857142857142855,
+      "Specificity": 0.7777777777777778,
+      "TN": 7,
+      "FP": 2,
+      "FN": 4,
+      "TP": 3,
+      "validation_AUROC_at_selection": 0.6444444444444445,
+      "generalization_gap_AUROC": -0.08571428571428563,
+      "auroc_bootstrap_ci95_lower": 0.4332142857142857,
+      "auroc_bootstrap_ci95_upper": 0.9584659090909089,
+      "auroc_bootstrap_n_valid": 1000
+    },
+    {
+      "target": "target_her2",
+      "target_display": "HER2",
+      "modality_variant": "radiomics_only",
+      "model": "logistic",
+      "model_display": "Logistic Regression",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.3,
+      "n_train": 95,
+      "n_valid": 20,
+      "n_test": 17,
+      "n_input_features": 377,
+      "n_selected_features": 20,
+      "train_positive_rate": 0.5157894736842106,
+      "valid_positive_rate": 0.55,
+      "test_positive_rate": 0.5294117647058824,
+      "AUROC": 0.7638888888888888,
+      "AUPRC": 0.7910373577040244,
+      "F1": 0.8,
+      "Balanced_Acc": 0.7569444444444444,
+      "Precision": 0.7272727272727273,
+      "Recall_Sensitivity": 0.8888888888888888,
+      "Specificity": 0.625,
+      "TN": 5,
+      "FP": 3,
+      "FN": 1,
+      "TP": 8,
+      "validation_AUROC_at_selection": 0.6565656565656566,
+      "generalization_gap_AUROC": -0.10732323232323226,
+      "auroc_bootstrap_ci95_lower": 0.48055555555555557,
+      "auroc_bootstrap_ci95_upper": 0.9864583333333331,
+      "auroc_bootstrap_n_valid": 1000
+    },
+    {
+      "target": "target_pr",
+      "target_display": "PR",
+      "modality_variant": "image_only",
+      "model": "logistic",
+      "model_display": "Logistic Regression",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.5,
+      "n_train": 97,
+      "n_valid": 19,
+      "n_test": 16,
+      "n_input_features": 186,
+      "n_selected_features": 12,
+      "train_positive_rate": 0.35051546391752575,
+      "valid_positive_rate": 0.3157894736842105,
+      "test_positive_rate": 0.3125,
+      "AUROC": 0.8363636363636364,
+      "AUPRC": 0.7933333333333333,
+      "F1": 0.7272727272727273,
+      "Balanced_Acc": 0.8090909090909091,
+      "Precision": 0.6666666666666666,
+      "Recall_Sensitivity": 0.8,
+      "Specificity": 0.8181818181818182,
+      "TN": 9,
+      "FP": 2,
+      "FN": 1,
+      "TP": 4,
+      "validation_AUROC_at_selection": 0.4615384615384615,
+      "generalization_gap_AUROC": -0.3748251748251749,
+      "auroc_bootstrap_ci95_lower": 0.5449810606060606,
+      "auroc_bootstrap_ci95_upper": 1.0,
+      "auroc_bootstrap_n_valid": 996
+    }
+  ],
+  "cross_stage_comparison_to_step05": [
+    {
+      "target": "target_er",
+      "target_display": "ER",
+      "modality_variant": "image_only",
+      "model": "elastic_net",
+      "model_display": "Elastic Net Logistic",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.5,
+      "n_train": 100,
+      "n_valid": 19,
+      "n_test": 16,
+      "n_input_features": 186,
+      "n_selected_features": 12,
+      "train_positive_rate": 0.48,
+      "valid_positive_rate": 0.5263157894736842,
+      "test_positive_rate": 0.4375,
+      "AUROC": 0.7301587301587301,
+      "AUPRC": 0.6732993197278911,
+      "F1": 0.5,
+      "Balanced_Acc": 0.6031746031746031,
+      "Precision": 0.6,
+      "Recall_Sensitivity": 0.42857142857142855,
+      "Specificity": 0.7777777777777778,
+      "TN": 7,
+      "FP": 2,
+      "FN": 4,
+      "TP": 3,
+      "validation_AUROC_at_selection": 0.6444444444444445,
+      "generalization_gap_AUROC": -0.08571428571428563,
+      "auroc_bootstrap_ci95_lower": 0.4332142857142857,
+      "auroc_bootstrap_ci95_upper": 0.9584659090909089,
+      "auroc_bootstrap_n_valid": 1000,
+      "step05_best_auroc": 0.7063492063492063,
+      "step05_best_auprc": 0.6467643467643467,
+      "step05_best_model_display": "XGBoost",
+      "step05_best_variant": "radiomics_plus_scanner",
+      "delta_auroc_step06_minus_step05": 0.023809523809523836
+    },
+    {
+      "target": "target_her2",
+      "target_display": "HER2",
+      "modality_variant": "radiomics_only",
+      "model": "logistic",
+      "model_display": "Logistic Regression",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.3,
+      "n_train": 95,
+      "n_valid": 20,
+      "n_test": 17,
+      "n_input_features": 377,
+      "n_selected_features": 20,
+      "train_positive_rate": 0.5157894736842106,
+      "valid_positive_rate": 0.55,
+      "test_positive_rate": 0.5294117647058824,
+      "AUROC": 0.7638888888888888,
+      "AUPRC": 0.7910373577040244,
+      "F1": 0.8,
+      "Balanced_Acc": 0.7569444444444444,
+      "Precision": 0.7272727272727273,
+      "Recall_Sensitivity": 0.8888888888888888,
+      "Specificity": 0.625,
+      "TN": 5,
+      "FP": 3,
+      "FN": 1,
+      "TP": 8,
+      "validation_AUROC_at_selection": 0.6565656565656566,
+      "generalization_gap_AUROC": -0.10732323232323226,
+      "auroc_bootstrap_ci95_lower": 0.48055555555555557,
+      "auroc_bootstrap_ci95_upper": 0.9864583333333331,
+      "auroc_bootstrap_n_valid": 1000,
+      "step05_best_auroc": 0.5833333333333333,
+      "step05_best_auprc": 0.6478446934329287,
+      "step05_best_model_display": "Elastic Net (L1+L2)",
+      "step05_best_variant": "radiomics_only",
+      "delta_auroc_step06_minus_step05": 0.18055555555555558
+    },
+    {
+      "target": "target_pr",
+      "target_display": "PR",
+      "modality_variant": "image_only",
+      "model": "logistic",
+      "model_display": "Logistic Regression",
+      "selected_on": "valid_AUROC",
+      "threshold_selected_on_valid": 0.5,
+      "n_train": 97,
+      "n_valid": 19,
+      "n_test": 16,
+      "n_input_features": 186,
+      "n_selected_features": 12,
+      "train_positive_rate": 0.35051546391752575,
+      "valid_positive_rate": 0.3157894736842105,
+      "test_positive_rate": 0.3125,
+      "AUROC": 0.8363636363636364,
+      "AUPRC": 0.7933333333333333,
+      "F1": 0.7272727272727273,
+      "Balanced_Acc": 0.8090909090909091,
+      "Precision": 0.6666666666666666,
+      "Recall_Sensitivity": 0.8,
+      "Specificity": 0.8181818181818182,
+      "TN": 9,
+      "FP": 2,
+      "FN": 1,
+      "TP": 4,
+      "validation_AUROC_at_selection": 0.4615384615384615,
+      "generalization_gap_AUROC": -0.3748251748251749,
+      "auroc_bootstrap_ci95_lower": 0.5449810606060606,
+      "auroc_bootstrap_ci95_upper": 1.0,
+      "auroc_bootstrap_n_valid": 996,
+      "step05_best_auroc": 0.6545454545454545,
+      "step05_best_auprc": 0.4180555555555555,
+      "step05_best_model_display": "LightGBM (Strong Reg.)",
+      "step05_best_variant": "radiomics_only",
+      "delta_auroc_step06_minus_step05": 0.18181818181818188
+    }
+  ],
+  "validation_master_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step06_image_benchmark\\step06_validation_model_comparison_master_table.csv",
+  "final_test_results_csv": "D:\\PycharmProjects\\bcbm_project\\bcbm_project\\reports\\tables\\step06_image_benchmark\\step06_model_results.csv"
+}

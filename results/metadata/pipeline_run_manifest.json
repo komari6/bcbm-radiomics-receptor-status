@@ -1,0 +1,18 @@
+{
+  "run_at": "2026-06-19T00:54:35.183013",
+  "dry_run": false,
+  "steps_run": [
+    {
+      "step": 12,
+      "script": "src/analysis/step_12_combat_eb_and_statistical_comparison.py",
+      "success": true
+    },
+    {
+      "step": 13,
+      "script": "src/reporting/step_13_figures_and_reports.py",
+      "success": true
+    }
+  ],
+  "failed_steps": [],
+  "success": true
+}

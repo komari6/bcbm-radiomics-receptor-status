@@ -1,0 +1,8 @@
+{
+ "input": "bcbm_project/data/processed/analysis_ready_step04_patient_level_agg_largest.csv",
+ "repeats": 10,
+ "outer_splits": 5,
+ "inner_splits": 3,
+ "seed_base": 42,
+ "runtime_minutes": 78.7
+}
