@@ -1,0 +1,9 @@
+{
+ "part": "fullnull",
+ "n_perm": 50,
+ "jobs": 22,
+ "cap": 20,
+ "n_repeats": 10,
+ "runtime_minutes": 1410.3,
+ "source": "added after the 2026-11-13/14 rerun; fullnull reporting rule in docs/PROTOCOL_added_analyses.md, S24"
+}

@@ -1,0 +1,18 @@
+{
+ "n_patients": 165,
+ "n_included": 140,
+ "exclusion_reasons": {
+  "included": 140,
+  "no_receptor_label": 23,
+  "no_lesion_mask": 2
+ },
+ "excluded_with_lesion_masks": 23,
+ "constant_variables": {
+  "sex": [
+   "Female"
+  ],
+  "manufacturer": [
+   "SIEMENS"
+  ]
+ }
+}

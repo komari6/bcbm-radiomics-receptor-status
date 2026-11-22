@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+patient_original_ngtdm_strength_mean,0.03808119232349779,abs_coefficient
+patient_original_firstorder_kurtosis_iqr,0.021302095456253372,abs_coefficient
+patient_original_gldm_dependencevariance_mean,0.0,abs_coefficient
+patient_original_gldm_largedependencehighgraylevelemphasis_max,0.0,abs_coefficient
+patient_original_shape_elongation_mean,0.0,abs_coefficient

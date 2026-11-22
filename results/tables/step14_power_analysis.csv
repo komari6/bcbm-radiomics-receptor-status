@@ -1,0 +1,7 @@
+﻿target,target_display,set,n_pos,n_neg,n_total,prevalence,se_auc_at_0.70,power_to_detect_0.70,power_sim_0.70,power_sim_0.70_se_at_null,se_auc_at_0.50,min_detectable_auc_80pct,required_total_n_auc070,cohort_labeled_n
+target_er,ER,locked_test,7,9,16,0.478,0.1376,0.247,0.36,0.233,0.15,0.875,63.0,136
+target_er,ER,nested_oof_pool,58,62,120,0.478,0.0479,0.978,,,0.053,0.646,,136
+target_pr,PR,locked_test,5,11,16,0.338,0.1519,0.225,0.315,0.238,0.1605,0.899,72.0,133
+target_pr,PR,nested_oof_pool,40,77,117,0.338,0.0531,0.954,,,0.0565,0.657,,133
+target_her2,HER2,locked_test,9,8,17,0.526,0.1293,0.261,0.404,0.289,0.1443,0.861,63.0,133
+target_her2,HER2,nested_oof_pool,61,55,116,0.526,0.0482,0.975,,,0.0539,0.648,,133

@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+patient_meta_final_resolution_confidence_n_unique,0.5720621174457484,model_native
+min_field_strength_t,0.2797545636530388,model_native
+patient_meta_final_resolution_source_n_unique,0.08014620101966177,model_native
+n_unique_field_strength_patient,0.043391787265661994,model_native
+entropy_magnetic_field_strength_label_patient,0.024645330615888982,model_native

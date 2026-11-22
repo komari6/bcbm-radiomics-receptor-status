@@ -1,0 +1,10 @@
+﻿target,target_display,scenario,feature_set_variant,model,model_display,mean_inner_cv_auroc,std_inner_cv_auroc,n_outer_folds_as_winner
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,svm_linear,Linear SVM (Calibrated),0.5847443977591037,0.03544678853712822,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,pls_logistic,PLS + Logistic,0.5839028944911298,0.04069106690768222,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,extra_trees,Extra Trees,0.5797560690943044,0.04494005827258943,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net,Elastic Net (L1+L2),0.5793499066293184,0.040652616206199574,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,lgbm,LightGBM,0.5611000233426704,0.02955554455767803,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,xgb,XGBoost,0.5477591036414566,0.04387646769954146,1
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,lgbm_strong,LightGBM (Strong Reg.),0.5152742763772176,0.019664089370229752,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_strong,Elastic Net (Strong),0.5017028478057889,0.05539686729794553,0
+target_her2,HER2,nested_cv_leakage_safe,radiomics_plus_burden,elastic_net_sparse,Elastic Net (Sparse),0.5002777777777778,0.03218388523991165,0

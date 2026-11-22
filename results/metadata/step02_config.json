@@ -1,0 +1,19 @@
+{
+  "project_root": "D:\\PycharmProjects\\bcbm_project\\bcbm_project",
+  "step_name": "step_02_data_audit",
+  "max_unique_samples": 25,
+  "high_missing_threshold": 0.5,
+  "full_uniques_if_leq": 30,
+  "case_source_priority": [
+    "case_id",
+    "patient_base",
+    "visit_index",
+    "matched_mask_file",
+    "FilenamePrefix",
+    "ID",
+    "image_path",
+    "mask_path"
+  ],
+  "images_masks_root_name": "BCBM-RadioGenomics_Images_Masks_Dec2024",
+  "sanity_pass_threshold": 0.95
+}

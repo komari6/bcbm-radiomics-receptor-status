@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+patient_original_shape_elongation_cv,67.0,model_native
+patient_original_glcm_clustershade_iqr,34.0,model_native
+patient_original_gldm_largedependencelowgraylevelemphasis_cv,28.0,model_native
+patient_original_firstorder_variance_iqr,25.0,model_native
+pairwise_euclidean_mean,24.0,model_native

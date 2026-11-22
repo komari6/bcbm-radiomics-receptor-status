@@ -1,0 +1,1260 @@
+{
+  "enabled": true,
+  "field_strength_column_used": "magnetic_field_strength_t",
+  "patient_dominant_field_strength_column": "dominant_field_strength_t",
+  "available": true,
+  "n_lesion_rows_with_field_strength": 409,
+  "lesion_field_strength_counts": {
+    "1.5T": 389,
+    "3T": 20,
+    "missing": 2
+  },
+  "patient_field_strength_counts": {
+    "1.5": 129,
+    "3.0": 9,
+    "missing": 2
+  },
+  "label_vs_field_strength": {
+    "target_er": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 64,
+          "1.0": 62
+        },
+        "3.0": {
+          "0.0": 5,
+          "1.0": 3
+        }
+      },
+      "p_value_chi2": 0.7812744653578039
+    },
+    "target_pr": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 81,
+          "1.0": 43
+        },
+        "3.0": {
+          "0.0": 7,
+          "1.0": 1
+        }
+      },
+      "p_value_chi2": 0.36664018855874503
+    },
+    "target_her2": {
+      "contingency_table": {
+        "1.5": {
+          "0.0": 61,
+          "1.0": 63
+        },
+        "3.0": {
+          "0.0": 2,
+          "1.0": 7
+        }
+      },
+      "p_value_chi2": 0.2228297360943881
+    }
+  },
+  "radiomics_shift_screening": [
+    {
+      "feature": "patient_original_shape_elongation_mean",
+      "p_value_mannwhitney": 0.02083227834797414,
+      "median_group_1_5T": 0.8184124380323969,
+      "median_group_3T": 0.685848271829185,
+      "abs_median_difference": 0.13256416620321199,
+      "cliffs_delta": 0.46253229974160215,
+      "cliffs_delta_ci_lo": 0.07644272179155898,
+      "cliffs_delta_ci_hi": 0.79328165374677,
+      "p_value_bh": 0.3184362547476047
+    },
+    {
+      "feature": "patient_original_shape_flatness_mean",
+      "p_value_mannwhitney": 0.11655068053969685,
+      "median_group_1_5T": 0.658956823814814,
+      "median_group_3T": 0.5595133515036798,
+      "abs_median_difference": 0.09944347231113426,
+      "cliffs_delta": 0.314384151593454,
+      "cliffs_delta_ci_lo": -0.07149009474590873,
+      "cliffs_delta_ci_hi": 0.6416881998277346,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_shape_leastaxislength_mean",
+      "p_value_mannwhitney": 0.8293156677300412,
+      "median_group_1_5T": 7.13620936659299,
+      "median_group_3T": 8.139851690855469,
+      "abs_median_difference": 1.0036423242624792,
+      "cliffs_delta": -0.043927648578811374,
+      "cliffs_delta_ci_lo": -0.35055986218776913,
+      "cliffs_delta_ci_hi": 0.297157622739018,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_shape_majoraxislength_mean",
+      "p_value_mannwhitney": 0.5011970191059579,
+      "median_group_1_5T": 12.586583696715415,
+      "median_group_3T": 13.277020507314411,
+      "abs_median_difference": 0.690436810598996,
+      "cliffs_delta": -0.13522825150732132,
+      "cliffs_delta_ci_lo": -0.5090439276485788,
+      "cliffs_delta_ci_hi": 0.28337639965546946,
+      "p_value_bh": 0.7719601598159312
+    },
+    {
+      "feature": "patient_original_shape_maximum2ddiametercolumn_mean",
+      "p_value_mannwhitney": 0.9039085472929929,
+      "median_group_1_5T": 12.5299640861416,
+      "median_group_3T": 14.405565043246561,
+      "abs_median_difference": 1.875600957104961,
+      "cliffs_delta": -0.0249784668389319,
+      "cliffs_delta_ci_lo": -0.3626614987080103,
+      "cliffs_delta_ci_hi": 0.34194659776055114,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_shape_maximum2ddiameterrow_mean",
+      "p_value_mannwhitney": 0.6353037655965537,
+      "median_group_1_5T": 12.1650947325647,
+      "median_group_3T": 14.212044286331551,
+      "abs_median_difference": 2.0469495537668507,
+      "cliffs_delta": -0.09560723514211888,
+      "cliffs_delta_ci_lo": -0.4349698535745047,
+      "cliffs_delta_ci_hi": 0.2816968130921616,
+      "p_value_bh": 0.8392284310966821
+    },
+    {
+      "feature": "patient_original_shape_maximum2ddiameterslice_mean",
+      "p_value_mannwhitney": 0.598878778644671,
+      "median_group_1_5T": 13.119231084715135,
+      "median_group_3T": 15.907514830177956,
+      "abs_median_difference": 2.78828374546282,
+      "cliffs_delta": -0.10594315245478036,
+      "cliffs_delta_ci_lo": -0.4728682170542635,
+      "cliffs_delta_ci_hi": 0.29552110249784624,
+      "p_value_bh": 0.8111396115820227
+    },
+    {
+      "feature": "patient_original_shape_maximum3ddiameter_mean",
+      "p_value_mannwhitney": 0.5547294604569099,
+      "median_group_1_5T": 15.1822264506889,
+      "median_group_3T": 16.349831833102648,
+      "abs_median_difference": 1.1676053824137487,
+      "cliffs_delta": -0.11886304909560719,
+      "cliffs_delta_ci_lo": -0.4832041343669251,
+      "cliffs_delta_ci_hi": 0.29026701119724385,
+      "p_value_bh": 0.7914140302518581
+    },
+    {
+      "feature": "patient_original_shape_meshvolume_mean",
+      "p_value_mannwhitney": 0.9381394334328383,
+      "median_group_1_5T": 780.8541666666632,
+      "median_group_3T": 1319.9374999999984,
+      "abs_median_difference": 539.0833333333352,
+      "cliffs_delta": 0.01636520241171402,
+      "cliffs_delta_ci_lo": -0.30585701981050817,
+      "cliffs_delta_ci_hi": 0.37127476313522806,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_shape_minoraxislength_mean",
+      "p_value_mannwhitney": 0.7958704246880572,
+      "median_group_1_5T": 8.850550242746893,
+      "median_group_3T": 9.944072677557445,
+      "abs_median_difference": 1.0935224348105521,
+      "cliffs_delta": 0.052540913006029255,
+      "cliffs_delta_ci_lo": -0.26619293712316966,
+      "cliffs_delta_ci_hi": 0.39534883720930236,
+      "p_value_bh": 0.9648414214029832
+    },
+    {
+      "feature": "patient_original_shape_sphericity_mean",
+      "p_value_mannwhitney": 0.393274473923253,
+      "median_group_1_5T": 0.757678291156463,
+      "median_group_3T": 0.7581811040750943,
+      "abs_median_difference": 0.0005028129186313013,
+      "cliffs_delta": 0.17140396210163655,
+      "cliffs_delta_ci_lo": -0.25254091300602927,
+      "cliffs_delta_ci_hi": 0.5625322997416017,
+      "p_value_bh": 0.6760891967551153
+    },
+    {
+      "feature": "patient_original_shape_surfacearea_mean",
+      "p_value_mannwhitney": 0.8427845456696956,
+      "median_group_1_5T": 499.9412779563424,
+      "median_group_3T": 663.6466432173015,
+      "abs_median_difference": 163.70536526095913,
+      "cliffs_delta": -0.040482342807924176,
+      "cliffs_delta_ci_lo": -0.3729543496985357,
+      "cliffs_delta_ci_hi": 0.33850129198966417,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_shape_surfacevolumeratio_mean",
+      "p_value_mannwhitney": 0.7366418164944086,
+      "median_group_1_5T": 0.9759706591260272,
+      "median_group_3T": 0.9218484187310603,
+      "abs_median_difference": 0.054122240394966936,
+      "cliffs_delta": 0.06804478897502153,
+      "cliffs_delta_ci_lo": -0.2524978466838932,
+      "cliffs_delta_ci_hi": 0.3695090439276485,
+      "p_value_bh": 0.9273020513517849
+    },
+    {
+      "feature": "patient_original_shape_voxelvolume_mean",
+      "p_value_mannwhitney": 0.9381394334328383,
+      "median_group_1_5T": 785.75,
+      "median_group_3T": 1326.0625,
+      "abs_median_difference": 540.3125,
+      "cliffs_delta": 0.01636520241171402,
+      "cliffs_delta_ci_lo": -0.3058139534883721,
+      "cliffs_delta_ci_hi": 0.37127476313522806,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_firstorder_10percentile_mean",
+      "p_value_mannwhitney": 0.01613178470746688,
+      "median_group_1_5T": 192.196099853515,
+      "median_group_3T": 271.11884765625,
+      "abs_median_difference": 78.92274780273502,
+      "cliffs_delta": -0.4814814814814815,
+      "cliffs_delta_ci_lo": -0.9827734711455641,
+      "cliffs_delta_ci_hi": 0.04306632213608963,
+      "p_value_bh": 0.287683493949826
+    },
+    {
+      "feature": "patient_original_firstorder_90percentile_mean",
+      "p_value_mannwhitney": 0.0002559562482799246,
+      "median_group_1_5T": 365.256726074218,
+      "median_group_3T": 522.5451985677083,
+      "abs_median_difference": 157.2884724934903,
+      "cliffs_delta": -0.7312661498708011,
+      "cliffs_delta_ci_lo": -0.9328165374677002,
+      "cliffs_delta_ci_hi": -0.4452627045650304,
+      "p_value_bh": 0.013693659282975968
+    },
+    {
+      "feature": "patient_original_firstorder_energy_mean",
+      "p_value_mannwhitney": 0.28494645407961383,
+      "median_group_1_5T": 275816387.2744256,
+      "median_group_3T": 763465980.608144,
+      "abs_median_difference": 487649593.3337184,
+      "cliffs_delta": -0.21447028423772607,
+      "cliffs_delta_ci_lo": -0.5435400516795866,
+      "cliffs_delta_ci_hi": 0.15598621877691599,
+      "p_value_bh": 0.5752692563494091
+    },
+    {
+      "feature": "patient_original_firstorder_entropy_mean",
+      "p_value_mannwhitney": 0.11064805877212945,
+      "median_group_1_5T": 3.33565221439084,
+      "median_group_3T": 3.841728296251775,
+      "abs_median_difference": 0.5060760818609351,
+      "cliffs_delta": -0.3195521102497847,
+      "cliffs_delta_ci_lo": -0.6968130921619293,
+      "cliffs_delta_ci_hi": 0.1197674418604649,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_firstorder_interquartilerange_mean",
+      "p_value_mannwhitney": 0.0675326341184961,
+      "median_group_1_5T": 86.8402099609375,
+      "median_group_3T": 147.2489929199215,
+      "abs_median_difference": 60.408782958984006,
+      "cliffs_delta": -0.3660637381567614,
+      "cliffs_delta_ci_lo": -0.7622739018087855,
+      "cliffs_delta_ci_hi": 0.08703703703703686,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_firstorder_kurtosis_mean",
+      "p_value_mannwhitney": 0.5403754725275589,
+      "median_group_1_5T": 3.06131394577136,
+      "median_group_3T": 3.29054127434042,
+      "abs_median_difference": 0.2292273285690598,
+      "cliffs_delta": 0.12316968130921624,
+      "cliffs_delta_ci_lo": -0.27136089577950046,
+      "cliffs_delta_ci_hi": 0.536649440137812,
+      "p_value_bh": 0.7896237020505275
+    },
+    {
+      "feature": "patient_original_firstorder_maximum_mean",
+      "p_value_mannwhitney": 0.0024025112759267675,
+      "median_group_1_5T": 499.67611694335903,
+      "median_group_3T": 670.3982543945307,
+      "abs_median_difference": 170.72213745117165,
+      "cliffs_delta": -0.6072351421188631,
+      "cliffs_delta_ci_lo": -0.8225667527993109,
+      "cliffs_delta_ci_hi": -0.3470714900947462,
+      "p_value_bh": 0.051413741304832825
+    },
+    {
+      "feature": "patient_original_firstorder_meanabsolutedeviation_mean",
+      "p_value_mannwhitney": 0.06498532133676514,
+      "median_group_1_5T": 53.750616379916195,
+      "median_group_3T": 81.08378089698087,
+      "abs_median_difference": 27.333164517064674,
+      "cliffs_delta": -0.3695090439276486,
+      "cliffs_delta_ci_lo": -0.7536606373815676,
+      "cliffs_delta_ci_hi": 0.06464254952627019,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_firstorder_mean_mean",
+      "p_value_mannwhitney": 0.0009004269518346426,
+      "median_group_1_5T": 275.922172772892,
+      "median_group_3T": 386.90469111810125,
+      "abs_median_difference": 110.98251834520926,
+      "cliffs_delta": -0.6640826873385013,
+      "cliffs_delta_ci_lo": -0.9638242894056848,
+      "cliffs_delta_ci_hi": -0.2781653746770028,
+      "p_value_bh": 0.02408642096157669
+    },
+    {
+      "feature": "patient_original_firstorder_median_mean",
+      "p_value_mannwhitney": 0.0008730093639278903,
+      "median_group_1_5T": 274.93619791666634,
+      "median_group_3T": 377.1211242675777,
+      "abs_median_difference": 102.18492635091138,
+      "cliffs_delta": -0.6658053402239449,
+      "cliffs_delta_ci_lo": -0.9448751076658053,
+      "cliffs_delta_ci_hi": -0.2557278208441004,
+      "p_value_bh": 0.02408642096157669
+    },
+    {
+      "feature": "patient_original_firstorder_minimum_mean",
+      "p_value_mannwhitney": 0.19354446708737694,
+      "median_group_1_5T": 79.441436767578,
+      "median_group_3T": 149.27429199218733,
+      "abs_median_difference": 69.83285522460933,
+      "cliffs_delta": -0.2592592592592593,
+      "cliffs_delta_ci_lo": -0.7382428940568475,
+      "cliffs_delta_ci_hi": 0.23686477174849263,
+      "p_value_bh": 0.44586326858023684
+    },
+    {
+      "feature": "patient_original_firstorder_range_mean",
+      "p_value_mannwhitney": 0.13802505195483752,
+      "median_group_1_5T": 433.453536987304,
+      "median_group_3T": 521.1239624023434,
+      "abs_median_difference": 87.6704254150394,
+      "cliffs_delta": -0.29715762273901813,
+      "cliffs_delta_ci_lo": -0.669250645994832,
+      "cliffs_delta_ci_hi": 0.16111111111111082,
+      "p_value_bh": 0.38162829020962635
+    },
+    {
+      "feature": "patient_original_firstorder_robustmeanabsolutedeviation_mean",
+      "p_value_mannwhitney": 0.06131340206721541,
+      "median_group_1_5T": 36.7753908816445,
+      "median_group_3T": 61.06704284242425,
+      "abs_median_difference": 24.291651960779753,
+      "cliffs_delta": -0.3746770025839793,
+      "cliffs_delta_ci_lo": -0.7623169681309216,
+      "cliffs_delta_ci_hi": 0.06985357450473673,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_firstorder_rootmeansquared_mean",
+      "p_value_mannwhitney": 0.0002559562482799246,
+      "median_group_1_5T": 285.9974000807475,
+      "median_group_3T": 395.3563571396757,
+      "abs_median_difference": 109.35895705892818,
+      "cliffs_delta": -0.7312661498708011,
+      "cliffs_delta_ci_lo": -0.9603789836347976,
+      "cliffs_delta_ci_hi": -0.3574504737295435,
+      "p_value_bh": 0.013693659282975968
+    },
+    {
+      "feature": "patient_original_firstorder_skewness_mean",
+      "p_value_mannwhitney": 0.07287383544135886,
+      "median_group_1_5T": 0.19297014566277068,
+      "median_group_3T": 0.4151179032841757,
+      "abs_median_difference": 0.222147757621405,
+      "cliffs_delta": -0.3591731266149871,
+      "cliffs_delta_ci_lo": -0.67786391042205,
+      "cliffs_delta_ci_hi": -0.0007751937984500338,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_firstorder_totalenergy_mean",
+      "p_value_mannwhitney": 0.28494645407961383,
+      "median_group_1_5T": 68954096.81860635,
+      "median_group_3T": 190866495.15203583,
+      "abs_median_difference": 121912398.33342949,
+      "cliffs_delta": -0.21447028423772607,
+      "cliffs_delta_ci_lo": -0.5435400516795866,
+      "cliffs_delta_ci_hi": 0.15598621877691599,
+      "p_value_bh": 0.5752692563494091
+    },
+    {
+      "feature": "patient_original_firstorder_uniformity_mean",
+      "p_value_mannwhitney": 0.2622825306391432,
+      "median_group_1_5T": 0.12647548770931547,
+      "median_group_3T": 0.117365634301556,
+      "abs_median_difference": 0.009109853407759466,
+      "cliffs_delta": 0.22480620155038755,
+      "cliffs_delta_ci_lo": -0.1886735572782084,
+      "cliffs_delta_ci_hi": 0.6072351421188631,
+      "p_value_bh": 0.5612846155677664
+    },
+    {
+      "feature": "patient_original_firstorder_variance_mean",
+      "p_value_mannwhitney": 0.06883677394606424,
+      "median_group_1_5T": 5324.936890993982,
+      "median_group_3T": 9833.140599688088,
+      "abs_median_difference": 4508.203708694105,
+      "cliffs_delta": -0.3643410852713178,
+      "cliffs_delta_ci_lo": -0.7502583979328166,
+      "cliffs_delta_ci_hi": 0.07665805340223941,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_autocorrelation_mean",
+      "p_value_mannwhitney": 0.1426647813867762,
+      "median_group_1_5T": 87.07647636324387,
+      "median_group_3T": 135.62653061533393,
+      "abs_median_difference": 48.550054252090064,
+      "cliffs_delta": -0.29371231696813094,
+      "cliffs_delta_ci_lo": -0.6864771748492678,
+      "cliffs_delta_ci_hi": 0.15430663221360835,
+      "p_value_bh": 0.38162829020962635
+    },
+    {
+      "feature": "patient_original_glcm_clusterprominence_mean",
+      "p_value_mannwhitney": 0.05235368933894154,
+      "median_group_1_5T": 2347.5009599097625,
+      "median_group_3T": 9021.647439644725,
+      "abs_median_difference": 6674.146479734962,
+      "cliffs_delta": -0.38845822566752797,
+      "cliffs_delta_ci_lo": -0.7692075796726959,
+      "cliffs_delta_ci_hi": 0.06808785529715738,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_clustershade_mean",
+      "p_value_mannwhitney": 0.14742330533726317,
+      "median_group_1_5T": 4.139145812472555,
+      "median_group_3T": 123.953506115234,
+      "abs_median_difference": 119.81436030276146,
+      "cliffs_delta": -0.29026701119724374,
+      "cliffs_delta_ci_lo": -0.7726528854435831,
+      "cliffs_delta_ci_hi": 0.2506459948320414,
+      "p_value_bh": 0.3847388700265161
+    },
+    {
+      "feature": "patient_original_glcm_clustertendency_mean",
+      "p_value_mannwhitney": 0.054484113898549284,
+      "median_group_1_5T": 24.078601314968196,
+      "median_group_3T": 52.319044937033794,
+      "abs_median_difference": 28.240443622065598,
+      "cliffs_delta": -0.3850129198966409,
+      "cliffs_delta_ci_lo": -0.7571059431524547,
+      "cliffs_delta_ci_hi": 0.05788113695090336,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_contrast_mean",
+      "p_value_mannwhitney": 0.11655068053969685,
+      "median_group_1_5T": 5.98714820736009,
+      "median_group_3T": 11.455548288869108,
+      "abs_median_difference": 5.468400081509018,
+      "cliffs_delta": -0.3143841515934539,
+      "cliffs_delta_ci_lo": -0.7157622739018088,
+      "cliffs_delta_ci_hi": 0.11972437553832904,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_glcm_correlation_mean",
+      "p_value_mannwhitney": 0.35617423092208544,
+      "median_group_1_5T": 0.5374136261375638,
+      "median_group_3T": 0.5662490184724552,
+      "abs_median_difference": 0.028835392334891408,
+      "cliffs_delta": -0.18518518518518523,
+      "cliffs_delta_ci_lo": -0.5469422911283377,
+      "cliffs_delta_ci_hi": 0.2041343669250646,
+      "p_value_bh": 0.6459430967570025
+    },
+    {
+      "feature": "patient_original_glcm_differenceaverage_mean",
+      "p_value_mannwhitney": 0.1269347529706197,
+      "median_group_1_5T": 1.7708223642927,
+      "median_group_3T": 2.40483127002526,
+      "abs_median_difference": 0.6340089057325602,
+      "cliffs_delta": -0.305770887166236,
+      "cliffs_delta_ci_lo": -0.67786391042205,
+      "cliffs_delta_ci_hi": 0.11296296296296221,
+      "p_value_bh": 0.37727829355156417
+    },
+    {
+      "feature": "patient_original_glcm_differenceentropy_mean",
+      "p_value_mannwhitney": 0.09266219005065136,
+      "median_group_1_5T": 2.36913863677188,
+      "median_group_3T": 2.81881705069505,
+      "abs_median_difference": 0.44967841392317,
+      "cliffs_delta": -0.33677863910422046,
+      "cliffs_delta_ci_lo": -0.7140396210163652,
+      "cliffs_delta_ci_hi": 0.0904392764857882,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_differencevariance_mean",
+      "p_value_mannwhitney": 0.08459333391496551,
+      "median_group_1_5T": 2.60922368095558,
+      "median_group_3T": 4.6149282695417755,
+      "abs_median_difference": 2.0057045885861955,
+      "cliffs_delta": -0.34539190353143845,
+      "cliffs_delta_ci_lo": -0.7347545219638244,
+      "cliffs_delta_ci_hi": 0.09737295434969823,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_id_mean",
+      "p_value_mannwhitney": 0.3885129200897036,
+      "median_group_1_5T": 0.500571035371624,
+      "median_group_3T": 0.46828275925066504,
+      "abs_median_difference": 0.032288276120958914,
+      "cliffs_delta": 0.17312661498708004,
+      "cliffs_delta_ci_lo": -0.25934539190353145,
+      "cliffs_delta_ci_hi": 0.5968992248062015,
+      "p_value_bh": 0.6760891967551153
+    },
+    {
+      "feature": "patient_original_glcm_idm_mean",
+      "p_value_mannwhitney": 0.39807120930441364,
+      "median_group_1_5T": 0.438380980298157,
+      "median_group_3T": 0.39880467903007205,
+      "abs_median_difference": 0.039576301268084924,
+      "cliffs_delta": 0.16968130921619284,
+      "cliffs_delta_ci_lo": -0.2575366063738157,
+      "cliffs_delta_ci_hi": 0.5883720930232553,
+      "p_value_bh": 0.6760891967551153
+    },
+    {
+      "feature": "patient_original_glcm_idmn_mean",
+      "p_value_mannwhitney": 0.9518671534631494,
+      "median_group_1_5T": 0.9797380802814594,
+      "median_group_3T": 0.9783005188393568,
+      "abs_median_difference": 0.0014375614421026084,
+      "cliffs_delta": -0.012919896640826822,
+      "cliffs_delta_ci_lo": -0.3540482342807924,
+      "cliffs_delta_ci_hi": 0.33333333333333326,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glcm_idn_mean",
+      "p_value_mannwhitney": 0.8025316495781823,
+      "median_group_1_5T": 0.9135192235044297,
+      "median_group_3T": 0.910013575294953,
+      "abs_median_difference": 0.0035056482094767416,
+      "cliffs_delta": -0.05081826012058566,
+      "cliffs_delta_ci_lo": -0.4401378122308355,
+      "cliffs_delta_ci_hi": 0.34711455641688205,
+      "p_value_bh": 0.9648414214029832
+    },
+    {
+      "feature": "patient_original_glcm_imc1_mean",
+      "p_value_mannwhitney": 0.49572553235859074,
+      "median_group_1_5T": -0.169759946153854,
+      "median_group_3T": -0.1560658311751925,
+      "abs_median_difference": 0.01369411497866152,
+      "cliffs_delta": -0.1369509043927648,
+      "cliffs_delta_ci_lo": -0.5487080103359173,
+      "cliffs_delta_ci_hi": 0.2989233419465976,
+      "p_value_bh": 0.7719601598159312
+    },
+    {
+      "feature": "patient_original_glcm_imc2_mean",
+      "p_value_mannwhitney": 0.5290272341108353,
+      "median_group_1_5T": 0.7726516734152465,
+      "median_group_3T": 0.8018965690297926,
+      "abs_median_difference": 0.029244895614546018,
+      "cliffs_delta": -0.12661498708010333,
+      "cliffs_delta_ci_lo": -0.5090869939707149,
+      "cliffs_delta_ci_hi": 0.27480620155038743,
+      "p_value_bh": 0.7861932506924914
+    },
+    {
+      "feature": "patient_original_glcm_inversevariance_mean",
+      "p_value_mannwhitney": 0.11857227789337108,
+      "median_group_1_5T": 0.39915308464566657,
+      "median_group_3T": 0.3357452459740878,
+      "abs_median_difference": 0.06340783867157879,
+      "cliffs_delta": 0.3126614987080103,
+      "cliffs_delta_ci_lo": -0.12661498708010333,
+      "cliffs_delta_ci_hi": 0.7020241171403959,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_glcm_jointaverage_mean",
+      "p_value_mannwhitney": 0.19584648246047787,
+      "median_group_1_5T": 8.814634164076885,
+      "median_group_3T": 10.627719398208976,
+      "abs_median_difference": 1.8130852341320907,
+      "cliffs_delta": -0.2592592592592593,
+      "cliffs_delta_ci_lo": -0.6365633074935401,
+      "cliffs_delta_ci_hi": 0.16976744186046455,
+      "p_value_bh": 0.44586326858023684
+    },
+    {
+      "feature": "patient_original_glcm_jointenergy_mean",
+      "p_value_mannwhitney": 0.4326243407220298,
+      "median_group_1_5T": 0.02793709781236044,
+      "median_group_3T": 0.021520356146899868,
+      "abs_median_difference": 0.006416741665460572,
+      "cliffs_delta": 0.15762273901808777,
+      "cliffs_delta_ci_lo": -0.29543496985357454,
+      "cliffs_delta_ci_hi": 0.5882859603789836,
+      "p_value_bh": 0.7013758251099574
+    },
+    {
+      "feature": "patient_original_glcm_jointentropy_mean",
+      "p_value_mannwhitney": 0.09100079860200407,
+      "median_group_1_5T": 5.976127256038647,
+      "median_group_3T": 6.78230064510786,
+      "abs_median_difference": 0.8061733890692127,
+      "cliffs_delta": -0.33850129198966405,
+      "cliffs_delta_ci_lo": -0.6813522825150732,
+      "cliffs_delta_ci_hi": 0.07329888027562392,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_mcc_mean",
+      "p_value_mannwhitney": 0.9656091715161133,
+      "median_group_1_5T": 0.643251861085236,
+      "median_group_3T": 0.6321826253509251,
+      "abs_median_difference": 0.011069235734310956,
+      "cliffs_delta": 0.009474590869939625,
+      "cliffs_delta_ci_lo": -0.4160637381567614,
+      "cliffs_delta_ci_hi": 0.4591300602928508,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glcm_maximumprobability_mean",
+      "p_value_mannwhitney": 0.9656091715161133,
+      "median_group_1_5T": 0.06365051431744885,
+      "median_group_3T": 0.0540613186188128,
+      "abs_median_difference": 0.009589195698636054,
+      "cliffs_delta": -0.009474590869939736,
+      "cliffs_delta_ci_lo": -0.44534883720930235,
+      "cliffs_delta_ci_hi": 0.43501291989664065,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glcm_sumaverage_mean",
+      "p_value_mannwhitney": 0.19584648246047787,
+      "median_group_1_5T": 17.62926832815375,
+      "median_group_3T": 21.25543879641793,
+      "abs_median_difference": 3.6261704682641813,
+      "cliffs_delta": -0.2592592592592593,
+      "cliffs_delta_ci_lo": -0.6365633074935401,
+      "cliffs_delta_ci_hi": 0.16976744186046455,
+      "p_value_bh": 0.44586326858023684
+    },
+    {
+      "feature": "patient_original_glcm_sumentropy_mean",
+      "p_value_mannwhitney": 0.09100079860200407,
+      "median_group_1_5T": 4.04598253483348,
+      "median_group_3T": 4.630314174153508,
+      "abs_median_difference": 0.5843316393200277,
+      "cliffs_delta": -0.33850129198966405,
+      "cliffs_delta_ci_lo": -0.6968561584840655,
+      "cliffs_delta_ci_hi": 0.07678725236864697,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glcm_sumsquares_mean",
+      "p_value_mannwhitney": 0.057814989192771324,
+      "median_group_1_5T": 7.605516563410674,
+      "median_group_3T": 15.943648306475735,
+      "abs_median_difference": 8.33813174306506,
+      "cliffs_delta": -0.3798449612403101,
+      "cliffs_delta_ci_lo": -0.7588716623600346,
+      "cliffs_delta_ci_hi": 0.06287683031869085,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_gldm_dependenceentropy_mean",
+      "p_value_mannwhitney": 0.32136100560890735,
+      "median_group_1_5T": 6.33748885326643,
+      "median_group_3T": 6.731578298315032,
+      "abs_median_difference": 0.39408944504860166,
+      "cliffs_delta": -0.1989664082687338,
+      "cliffs_delta_ci_lo": -0.5555555555555556,
+      "cliffs_delta_ci_hi": 0.2059431524547798,
+      "p_value_bh": 0.6085140689889955
+    },
+    {
+      "feature": "patient_original_gldm_dependencenonuniformity_mean",
+      "p_value_mannwhitney": 0.9656091715161133,
+      "median_group_1_5T": 305.64599641490184,
+      "median_group_3T": 604.7024278352169,
+      "abs_median_difference": 299.05643142031505,
+      "cliffs_delta": -0.009474590869939736,
+      "cliffs_delta_ci_lo": -0.31959517657192077,
+      "cliffs_delta_ci_hi": 0.3402670111972435,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_gldm_dependencenonuniformitynormalized_mean",
+      "p_value_mannwhitney": 0.8025316495781823,
+      "median_group_1_5T": 0.114118110240357,
+      "median_group_3T": 0.134398588373688,
+      "abs_median_difference": 0.020280478133331004,
+      "cliffs_delta": -0.05081826012058566,
+      "cliffs_delta_ci_lo": -0.46425495262704564,
+      "cliffs_delta_ci_hi": 0.3660637381567615,
+      "p_value_bh": 0.9648414214029832
+    },
+    {
+      "feature": "patient_original_gldm_dependencevariance_mean",
+      "p_value_mannwhitney": 0.869856871616286,
+      "median_group_1_5T": 8.689033742927384,
+      "median_group_3T": 10.009336659479176,
+      "abs_median_difference": 1.3203029165517925,
+      "cliffs_delta": -0.03359173126614989,
+      "cliffs_delta_ci_lo": -0.4746339362618432,
+      "cliffs_delta_ci_hi": 0.42295434969853557,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_gldm_graylevelnonuniformity_mean",
+      "p_value_mannwhitney": 0.7693785388957004,
+      "median_group_1_5T": 334.8651542157669,
+      "median_group_3T": 349.2020042957324,
+      "abs_median_difference": 14.33685007996553,
+      "cliffs_delta": 0.05943152454780365,
+      "cliffs_delta_ci_lo": -0.2695951765719208,
+      "cliffs_delta_ci_hi": 0.4022825150732126,
+      "p_value_bh": 0.9572500425795342
+    },
+    {
+      "feature": "patient_original_gldm_graylevelvariance_mean",
+      "p_value_mannwhitney": 0.06624889160269974,
+      "median_group_1_5T": 8.354668542695105,
+      "median_group_3T": 15.799437179272962,
+      "abs_median_difference": 7.444768636577857,
+      "cliffs_delta": -0.367786391042205,
+      "cliffs_delta_ci_lo": -0.7553832902670112,
+      "cliffs_delta_ci_hi": 0.07497846683893178,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_gldm_highgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.1426647813867762,
+      "median_group_1_5T": 86.0489181561618,
+      "median_group_3T": 133.11072989003785,
+      "abs_median_difference": 47.06181173387604,
+      "cliffs_delta": -0.29371231696813094,
+      "cliffs_delta_ci_lo": -0.6950904392764858,
+      "cliffs_delta_ci_hi": 0.16627906976744172,
+      "p_value_bh": 0.38162829020962635
+    },
+    {
+      "feature": "patient_original_gldm_largedependenceemphasis_mean",
+      "p_value_mannwhitney": 0.9039093114462061,
+      "median_group_1_5T": 41.64974056399455,
+      "median_group_3T": 39.95871992588075,
+      "abs_median_difference": 1.6910206381137982,
+      "cliffs_delta": 0.0249784668389319,
+      "cliffs_delta_ci_lo": -0.39711455641688204,
+      "cliffs_delta_ci_hi": 0.45219638242894056,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_gldm_largedependencehighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.6109153964536416,
+      "median_group_1_5T": 2782.37792441511,
+      "median_group_3T": 3469.2283485299904,
+      "abs_median_difference": 686.8504241148803,
+      "cliffs_delta": -0.10249784668389317,
+      "cliffs_delta_ci_lo": -0.5194229112833765,
+      "cliffs_delta_ci_hi": 0.3454349698535742,
+      "p_value_bh": 0.8170993427567457
+    },
+    {
+      "feature": "patient_original_gldm_largedependencelowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.8970826090742886,
+      "median_group_1_5T": 1.55066490497659,
+      "median_group_3T": 1.5868430464474388,
+      "abs_median_difference": 0.03617814147084886,
+      "cliffs_delta": -0.0267011197243755,
+      "cliffs_delta_ci_lo": -0.4729112833763996,
+      "cliffs_delta_ci_hi": 0.4160206718346253,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_gldm_lowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.8495365315126747,
+      "median_group_1_5T": 0.04719052549483635,
+      "median_group_3T": 0.03617361224779355,
+      "abs_median_difference": 0.011016913247042799,
+      "cliffs_delta": 0.03875968992248069,
+      "cliffs_delta_ci_lo": -0.44018087855297156,
+      "cliffs_delta_ci_hi": 0.48496985357450445,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_gldm_smalldependenceemphasis_mean",
+      "p_value_mannwhitney": 0.3298487476762779,
+      "median_group_1_5T": 0.1093238955854994,
+      "median_group_3T": 0.14095384454473764,
+      "abs_median_difference": 0.031629948959238235,
+      "cliffs_delta": -0.1955211024978467,
+      "cliffs_delta_ci_lo": -0.6089577950043066,
+      "cliffs_delta_ci_hi": 0.2454780361757105,
+      "p_value_bh": 0.6085140689889955
+    },
+    {
+      "feature": "patient_original_gldm_smalldependencehighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.07567134382510192,
+      "median_group_1_5T": 8.387700483608466,
+      "median_group_3T": 16.714075147326476,
+      "abs_median_difference": 8.32637466371801,
+      "cliffs_delta": -0.35572782084409993,
+      "cliffs_delta_ci_lo": -0.7537037037037038,
+      "cliffs_delta_ci_hi": 0.11115417743324701,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_gldm_smalldependencelowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.5122352462330011,
+      "median_group_1_5T": 0.005485218853736867,
+      "median_group_3T": 0.0041166327656223245,
+      "abs_median_difference": 0.0013685860881145423,
+      "cliffs_delta": 0.13178294573643412,
+      "cliffs_delta_ci_lo": -0.25762273901808785,
+      "cliffs_delta_ci_hi": 0.4900947459086995,
+      "p_value_bh": 0.7719601598159312
+    },
+    {
+      "feature": "patient_original_glrlm_graylevelnonuniformity_mean",
+      "p_value_mannwhitney": 0.6916137972540035,
+      "median_group_1_5T": 259.1876103635283,
+      "median_group_3T": 292.65481990140637,
+      "abs_median_difference": 33.46720953787809,
+      "cliffs_delta": 0.08010335917312661,
+      "cliffs_delta_ci_lo": -0.24375538329026702,
+      "cliffs_delta_ci_hi": 0.4091731266149868,
+      "p_value_bh": 0.9024716622704679
+    },
+    {
+      "feature": "patient_original_glrlm_graylevelnonuniformitynormalized_mean",
+      "p_value_mannwhitney": 0.09434784707185628,
+      "median_group_1_5T": 0.11444977981629066,
+      "median_group_3T": 0.08251251352399627,
+      "abs_median_difference": 0.03193726629229439,
+      "cliffs_delta": 0.33505598621877697,
+      "cliffs_delta_ci_lo": -0.10943152454780365,
+      "cliffs_delta_ci_hi": 0.7175279931093882,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glrlm_graylevelvariance_mean",
+      "p_value_mannwhitney": 0.05235368933894154,
+      "median_group_1_5T": 8.35568296727444,
+      "median_group_3T": 15.664034373006064,
+      "abs_median_difference": 7.308351405731624,
+      "cliffs_delta": -0.38845822566752797,
+      "cliffs_delta_ci_lo": -0.7760981912144703,
+      "cliffs_delta_ci_hi": 0.06287683031869085,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glrlm_highgraylevelrunemphasis_mean",
+      "p_value_mannwhitney": 0.13128464540470217,
+      "median_group_1_5T": 88.4187170730968,
+      "median_group_3T": 135.03467259665916,
+      "abs_median_difference": 46.61595552356236,
+      "cliffs_delta": -0.3023255813953488,
+      "cliffs_delta_ci_lo": -0.7105943152454781,
+      "cliffs_delta_ci_hi": 0.16459948320413387,
+      "p_value_bh": 0.3796610015757603
+    },
+    {
+      "feature": "patient_original_glrlm_longrunemphasis_mean",
+      "p_value_mannwhitney": 0.9518671534631494,
+      "median_group_1_5T": 1.85664497897773,
+      "median_group_3T": 1.894062000791565,
+      "abs_median_difference": 0.037417021813834994,
+      "cliffs_delta": 0.012919896640826822,
+      "cliffs_delta_ci_lo": -0.4160206718346253,
+      "cliffs_delta_ci_hi": 0.4659776055124891,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glrlm_longrunhighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.28494645407961383,
+      "median_group_1_5T": 151.19236514016205,
+      "median_group_3T": 216.193380521969,
+      "abs_median_difference": 65.00101538180695,
+      "cliffs_delta": -0.21447028423772607,
+      "cliffs_delta_ci_lo": -0.6003875968992248,
+      "cliffs_delta_ci_hi": 0.23867355727820805,
+      "p_value_bh": 0.5752692563494091
+    },
+    {
+      "feature": "patient_original_glrlm_longrunlowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.8766501528537144,
+      "median_group_1_5T": 0.0929327486547436,
+      "median_group_3T": 0.0592052560587426,
+      "abs_median_difference": 0.033727492596001,
+      "cliffs_delta": 0.031869078380706295,
+      "cliffs_delta_ci_lo": -0.467786391042205,
+      "cliffs_delta_ci_hi": 0.5108096468561583,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glrlm_lowgraylevelrunemphasis_mean",
+      "p_value_mannwhitney": 0.5929010708587411,
+      "median_group_1_5T": 0.04251622098243042,
+      "median_group_3T": 0.030862315604183548,
+      "abs_median_difference": 0.011653905378246874,
+      "cliffs_delta": 0.10766580534022396,
+      "cliffs_delta_ci_lo": -0.3335486649440138,
+      "cliffs_delta_ci_hi": 0.5142549526270455,
+      "p_value_bh": 0.8111396115820227
+    },
+    {
+      "feature": "patient_original_glrlm_runentropy_mean",
+      "p_value_mannwhitney": 0.15730306548247008,
+      "median_group_1_5T": 4.1202551656339,
+      "median_group_3T": 4.5514022209236,
+      "abs_median_difference": 0.4311470552897001,
+      "cliffs_delta": -0.28337639965546946,
+      "cliffs_delta_ci_lo": -0.6469422911283377,
+      "cliffs_delta_ci_hi": 0.16283376399655453,
+      "p_value_bh": 0.40074828587200717
+    },
+    {
+      "feature": "patient_original_glrlm_runlengthnonuniformity_mean",
+      "p_value_mannwhitney": 0.9450012518984152,
+      "median_group_1_5T": 1721.0089540667057,
+      "median_group_3T": 3421.572360994136,
+      "abs_median_difference": 1700.5634069274304,
+      "cliffs_delta": -0.01464254952627042,
+      "cliffs_delta_ci_lo": -0.33509905254091304,
+      "cliffs_delta_ci_hi": 0.3471576227390179,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glrlm_runlengthnonuniformitynormalized_mean",
+      "p_value_mannwhitney": 0.5460948967452246,
+      "median_group_1_5T": 0.7239942385368404,
+      "median_group_3T": 0.7781052471967177,
+      "abs_median_difference": 0.05411100865987728,
+      "cliffs_delta": -0.12144702842377264,
+      "cliffs_delta_ci_lo": -0.517829457364341,
+      "cliffs_delta_ci_hi": 0.2903100775193797,
+      "p_value_bh": 0.7896237020505275
+    },
+    {
+      "feature": "patient_original_glrlm_runpercentage_mean",
+      "p_value_mannwhitney": 0.7107891450094558,
+      "median_group_1_5T": 0.829124061198373,
+      "median_group_3T": 0.861653815879052,
+      "abs_median_difference": 0.03252975468067898,
+      "cliffs_delta": -0.07493540051679581,
+      "cliffs_delta_ci_lo": -0.5108527131782946,
+      "cliffs_delta_ci_hi": 0.36782945736434086,
+      "p_value_bh": 0.9163185363374913
+    },
+    {
+      "feature": "patient_original_glrlm_runvariance_mean",
+      "p_value_mannwhitney": 0.8427845456696956,
+      "median_group_1_5T": 0.335108195806462,
+      "median_group_3T": 0.452782737259651,
+      "abs_median_difference": 0.11767454145318901,
+      "cliffs_delta": -0.040482342807924176,
+      "cliffs_delta_ci_lo": -0.46080964685615844,
+      "cliffs_delta_ci_hi": 0.412618432385874,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glrlm_shortrunemphasis_mean",
+      "p_value_mannwhitney": 0.5122352462330011,
+      "median_group_1_5T": 0.8721924256753619,
+      "median_group_3T": 0.9005932021814382,
+      "abs_median_difference": 0.02840077650607631,
+      "cliffs_delta": -0.13178294573643412,
+      "cliffs_delta_ci_lo": -0.5350559862187769,
+      "cliffs_delta_ci_hi": 0.28863049095607185,
+      "p_value_bh": 0.7719601598159312
+    },
+    {
+      "feature": "patient_original_glrlm_shortrunhighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.12062126768046534,
+      "median_group_1_5T": 76.176570485157,
+      "median_group_3T": 114.5644422445538,
+      "abs_median_difference": 38.3878717593968,
+      "cliffs_delta": -0.3109388458225667,
+      "cliffs_delta_ci_lo": -0.7158053402239449,
+      "cliffs_delta_ci_hi": 0.15938845822566733,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_glrlm_shortrunlowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.4225789228593342,
+      "median_group_1_5T": 0.03480123844895765,
+      "median_group_3T": 0.01820710075130055,
+      "abs_median_difference": 0.016594137697657097,
+      "cliffs_delta": 0.16106804478897496,
+      "cliffs_delta_ci_lo": -0.25762273901808785,
+      "cliffs_delta_ci_hi": 0.5228682170542633,
+      "p_value_bh": 0.6956299191684425
+    },
+    {
+      "feature": "patient_original_glszm_graylevelnonuniformity_mean",
+      "p_value_mannwhitney": 0.5929010708587411,
+      "median_group_1_5T": 20.421048308363382,
+      "median_group_3T": 48.46375036686929,
+      "abs_median_difference": 28.04270205850591,
+      "cliffs_delta": -0.10766580534022396,
+      "cliffs_delta_ci_lo": -0.44879414298018944,
+      "cliffs_delta_ci_hi": 0.2937553832902667,
+      "p_value_bh": 0.8111396115820227
+    },
+    {
+      "feature": "patient_original_glszm_graylevelnonuniformitynormalized_mean",
+      "p_value_mannwhitney": 0.07710261984339664,
+      "median_group_1_5T": 0.09690122617468892,
+      "median_group_3T": 0.0754626633721066,
+      "abs_median_difference": 0.02143856280258233,
+      "cliffs_delta": 0.35400516795865644,
+      "cliffs_delta_ci_lo": -0.0715762273901809,
+      "cliffs_delta_ci_hi": 0.722695951765719,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glszm_graylevelvariance_mean",
+      "p_value_mannwhitney": 0.08152926892699697,
+      "median_group_1_5T": 12.4709394102401,
+      "median_group_3T": 17.467328266517264,
+      "abs_median_difference": 4.996388856277164,
+      "cliffs_delta": -0.34883720930232553,
+      "cliffs_delta_ci_lo": -0.7433677863910423,
+      "cliffs_delta_ci_hi": 0.11459948320413421,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glszm_highgraylevelzoneemphasis_mean",
+      "p_value_mannwhitney": 0.07426182486431351,
+      "median_group_1_5T": 84.24568955149957,
+      "median_group_3T": 148.68371951539967,
+      "abs_median_difference": 64.4380299639001,
+      "cliffs_delta": -0.3574504737295435,
+      "cliffs_delta_ci_lo": -0.7364341085271318,
+      "cliffs_delta_ci_hi": 0.10077519379844957,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glszm_largeareaemphasis_mean",
+      "p_value_mannwhitney": 0.4176078896248818,
+      "median_group_1_5T": 2547.838509316766,
+      "median_group_3T": 1167.86397378962,
+      "abs_median_difference": 1379.9745355271457,
+      "cliffs_delta": 0.16279069767441867,
+      "cliffs_delta_ci_lo": -0.20590008613264427,
+      "cliffs_delta_ci_hi": 0.5040051679586556,
+      "p_value_bh": 0.6956299191684425
+    },
+    {
+      "feature": "patient_original_glszm_largeareahighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.2622825306391432,
+      "median_group_1_5T": 188020.9965951181,
+      "median_group_3T": 77292.83683104094,
+      "abs_median_difference": 110728.15976407717,
+      "cliffs_delta": 0.22480620155038755,
+      "cliffs_delta_ci_lo": -0.1352713178294574,
+      "cliffs_delta_ci_hi": 0.5762273901808785,
+      "p_value_bh": 0.5612846155677664
+    },
+    {
+      "feature": "patient_original_glszm_largearealowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.8630731812482686,
+      "median_group_1_5T": 78.5326247165533,
+      "median_group_3T": 175.89002581881968,
+      "abs_median_difference": 97.35740110226638,
+      "cliffs_delta": -0.03531438415159349,
+      "cliffs_delta_ci_lo": -0.4488372093023255,
+      "cliffs_delta_ci_hi": 0.40749354005167915,
+      "p_value_bh": 0.9656091715161131
+    },
+    {
+      "feature": "patient_original_glszm_lowgraylevelzoneemphasis_mean",
+      "p_value_mannwhitney": 0.1757880020882211,
+      "median_group_1_5T": 0.0541564075646721,
+      "median_group_3T": 0.02736234345643567,
+      "abs_median_difference": 0.026794064108236426,
+      "cliffs_delta": 0.2713178294573644,
+      "cliffs_delta_ci_lo": -0.1852282515073213,
+      "cliffs_delta_ci_hi": 0.6451335055986218,
+      "p_value_bh": 0.42748445962362863
+    },
+    {
+      "feature": "patient_original_glszm_sizezonenonuniformity_mean",
+      "p_value_mannwhitney": 0.2586297618957535,
+      "median_group_1_5T": 72.06947879678073,
+      "median_group_3T": 214.92636693570012,
+      "abs_median_difference": 142.85688813891937,
+      "cliffs_delta": -0.22652885443583115,
+      "cliffs_delta_ci_lo": -0.591817398794143,
+      "cliffs_delta_ci_hi": 0.22136089577950036,
+      "p_value_bh": 0.5612846155677664
+    },
+    {
+      "feature": "patient_original_glszm_sizezonenonuniformitynormalized_mean",
+      "p_value_mannwhitney": 0.10873384167183202,
+      "median_group_1_5T": 0.23280217741999748,
+      "median_group_3T": 0.273114603359288,
+      "abs_median_difference": 0.04031242593929052,
+      "cliffs_delta": -0.3212747631352283,
+      "cliffs_delta_ci_lo": -0.7330318690783807,
+      "cliffs_delta_ci_hi": 0.18173987941429792,
+      "p_value_bh": 0.3687564469088512
+    },
+    {
+      "feature": "patient_original_glszm_smallareaemphasis_mean",
+      "p_value_mannwhitney": 0.07287383544135886,
+      "median_group_1_5T": 0.4776922574454224,
+      "median_group_3T": 0.5295073797541651,
+      "abs_median_difference": 0.05181512230874269,
+      "cliffs_delta": -0.3591731266149871,
+      "cliffs_delta_ci_lo": -0.7571490094745909,
+      "cliffs_delta_ci_hi": 0.13880275624461608,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glszm_smallareahighgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.07287383544135886,
+      "median_group_1_5T": 36.94839347281937,
+      "median_group_3T": 74.8769205368262,
+      "abs_median_difference": 37.928527064006836,
+      "cliffs_delta": -0.3591731266149871,
+      "cliffs_delta_ci_lo": -0.7692075796726959,
+      "cliffs_delta_ci_hi": 0.14043927648578786,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_glszm_smallarealowgraylevelemphasis_mean",
+      "p_value_mannwhitney": 0.3171711043772184,
+      "median_group_1_5T": 0.03238910381108205,
+      "median_group_3T": 0.013936563394762926,
+      "abs_median_difference": 0.018452540416319125,
+      "cliffs_delta": 0.2006890611541774,
+      "cliffs_delta_ci_lo": -0.26447028423772606,
+      "cliffs_delta_ci_hi": 0.5986218776916452,
+      "p_value_bh": 0.6085140689889955
+    },
+    {
+      "feature": "patient_original_glszm_zoneentropy_mean",
+      "p_value_mannwhitney": 0.32558688934302205,
+      "median_group_1_5T": 5.6424808528294,
+      "median_group_3T": 6.041663662442373,
+      "abs_median_difference": 0.3991828096129728,
+      "cliffs_delta": -0.1972437553832903,
+      "cliffs_delta_ci_lo": -0.5521533161068045,
+      "cliffs_delta_ci_hi": 0.21447028423772618,
+      "p_value_bh": 0.6085140689889955
+    },
+    {
+      "feature": "patient_original_glszm_zonepercentage_mean",
+      "p_value_mannwhitney": 0.30889925410215735,
+      "median_group_1_5T": 0.10673257994442534,
+      "median_group_3T": 0.16010265993496323,
+      "abs_median_difference": 0.05337007999053789,
+      "cliffs_delta": -0.2041343669250646,
+      "cliffs_delta_ci_lo": -0.6106804478897503,
+      "cliffs_delta_ci_hi": 0.23686477174849263,
+      "p_value_bh": 0.6085140689889955
+    },
+    {
+      "feature": "patient_original_glszm_zonevariance_mean",
+      "p_value_mannwhitney": 0.39807120930441364,
+      "median_group_1_5T": 2499.9875548074233,
+      "median_group_3T": 843.358024691358,
+      "abs_median_difference": 1656.6295301160653,
+      "cliffs_delta": 0.16968130921619284,
+      "cliffs_delta_ci_lo": -0.2041343669250646,
+      "cliffs_delta_ci_hi": 0.5194229112833761,
+      "p_value_bh": 0.6760891967551153
+    },
+    {
+      "feature": "patient_original_ngtdm_busyness_mean",
+      "p_value_mannwhitney": 0.730149303613269,
+      "median_group_1_5T": 2.079058309010615,
+      "median_group_3T": 2.1947759040727783,
+      "abs_median_difference": 0.11571759506216317,
+      "cliffs_delta": 0.06976744186046502,
+      "cliffs_delta_ci_lo": -0.29543496985357454,
+      "cliffs_delta_ci_hi": 0.4470714900947457,
+      "p_value_bh": 0.9273020513517849
+    },
+    {
+      "feature": "patient_original_ngtdm_coarseness_mean",
+      "p_value_mannwhitney": 0.44794872413400755,
+      "median_group_1_5T": 0.00950812664022,
+      "median_group_3T": 0.0056036216180109,
+      "abs_median_difference": 0.003904505022209101,
+      "cliffs_delta": 0.15245478036175708,
+      "cliffs_delta_ci_lo": -0.16623600344530576,
+      "cliffs_delta_ci_hi": 0.45228251507321227,
+      "p_value_bh": 0.7153807982438628
+    },
+    {
+      "feature": "patient_original_ngtdm_complexity_mean",
+      "p_value_mannwhitney": 0.08152926892699697,
+      "median_group_1_5T": 158.5596116333012,
+      "median_group_3T": 255.11323647174575,
+      "abs_median_difference": 96.55362483844456,
+      "cliffs_delta": -0.34883720930232553,
+      "cliffs_delta_ci_lo": -0.7381998277347115,
+      "cliffs_delta_ci_hi": 0.1335055986218776,
+      "p_value_bh": 0.34811102195478005
+    },
+    {
+      "feature": "patient_original_ngtdm_contrast_mean",
+      "p_value_mannwhitney": 0.16242738311313065,
+      "median_group_1_5T": 0.0713459474831629,
+      "median_group_3T": 0.11118146023759252,
+      "abs_median_difference": 0.03983551275442962,
+      "cliffs_delta": -0.27993109388458226,
+      "cliffs_delta_ci_lo": -0.669250645994832,
+      "cliffs_delta_ci_hi": 0.14043927648578786,
+      "p_value_bh": 0.40417976728151117
+    },
+    {
+      "feature": "patient_original_ngtdm_strength_mean",
+      "p_value_mannwhitney": 0.5810284548757898,
+      "median_group_1_5T": 0.6334165572656512,
+      "median_group_3T": 0.7478877753595861,
+      "abs_median_difference": 0.1144712180939349,
+      "cliffs_delta": -0.11111111111111116,
+      "cliffs_delta_ci_lo": -0.4763565891472868,
+      "cliffs_delta_ci_hi": 0.2540913006029286,
+      "p_value_bh": 0.8111396115820227
+    }
+  ],
+  "radiomics_shift_unit_of_analysis": "patient",
+  "radiomics_shift_test": "two-sided Mann-Whitney U, 1.5 T versus 3 T",
+  "radiomics_shift_group_sizes": {
+    "n_group_1_5T": 129,
+    "n_group_3T": 9
+  },
+  "n_radiomics_shift_features_tested": 107,
+  "n_radiomics_shift_features_p_lt_0_05": 7,
+  "n_radiomics_shift_features_p_lt_0_0001": 0,
+  "n_radiomics_shift_features_bh_lt_0_05": 4,
+  "radiomics_shift_screening_lesion_level_contrast": {
+    "note": "Lesions treated as independent, which they are not: this is reported only to show how much the apparent effect inflates when the unit of analysis is wrong.",
+    "group_sizes": {
+      "n_group_1_5T": 389,
+      "n_group_3T": 20,
+      "n_patients_1_5T": 129,
+      "n_patients_3T": 9
+    },
+    "n_features_tested": 107,
+    "n_p_lt_0_05": 53,
+    "n_p_lt_0_0001": 5,
+    "n_bh_lt_0_05": 48
+  }
+}

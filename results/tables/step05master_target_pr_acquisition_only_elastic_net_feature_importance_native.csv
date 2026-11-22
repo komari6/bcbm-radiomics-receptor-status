@@ -1,0 +1,6 @@
+﻿feature,importance,importance_type
+dominant_field_strength_t,0.489580614844373,abs_coefficient
+entropy_magnetic_field_strength_label_patient,0.12194789111877335,abs_coefficient
+patient_meta_final_resolution_confidence_n_unique,0.05685511592792083,abs_coefficient
+min_field_strength_t,0.0,abs_coefficient
+patient_meta_final_resolution_source_n_unique,0.0,abs_coefficient

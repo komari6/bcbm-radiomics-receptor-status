@@ -1,0 +1,8 @@
+{
+ "inputs": [
+  "step05b_patient_bootstrap_primary.csv",
+  "step05b_crossfitted_scores_primary.csv"
+ ],
+ "feature_set_variant": "radiomics_pure",
+ "method": "Hanley-McNeil (step 14 functions), patients as unit; bootstrap-implied SE = (CI hi - CI lo) / 3.92"
+}

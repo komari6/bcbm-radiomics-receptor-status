@@ -1,0 +1,41 @@
+{
+  "step": "step_18_external_feature_transfer",
+  "external_dataset": "UCSF-BMSR (breast subset)",
+  "n_bcbm_exams": 140,
+  "n_external_breast_exams": 113,
+  "n_external_control_exams": 90,
+  "n_common_features": 107,
+  "fraction_features_shifted_fdr05_raw": 0.9252,
+  "fraction_features_shifted_fdr05_after_location_scale": 0.514,
+  "median_abs_smd_raw": 0.4872,
+  "model_transfer_external_score_distribution": {
+    "ER": {
+      "mean": 0.499,
+      "sd": 0.0041,
+      "min": 0.4617,
+      "max": 0.5
+    },
+    "PR": {
+      "mean": 0.4952,
+      "sd": 0.0319,
+      "min": 0.1816,
+      "max": 0.5
+    },
+    "HER2": {
+      "mean": 0.4954,
+      "sd": 0.0307,
+      "min": 0.1926,
+      "max": 0.5
+    }
+  },
+  "positive_control_breast_vs_other_auroc": 0.5616,
+  "extraction": {
+    "binCount": 32,
+    "resampledPixelSpacing": [
+      1,
+      1,
+      1
+    ]
+  },
+  "note": "Feature-transfer / domain-shift only; UCSF-BMSR has no ER/PR/HER2 labels, so no external receptor AUROC is computable. Per-metastasis (connected component) extraction mirrors BCBM per-lesion features. UCSF-BMSR used under its DUA; cite Rudie et al., Radiol Artif Intell 2024."
+}
